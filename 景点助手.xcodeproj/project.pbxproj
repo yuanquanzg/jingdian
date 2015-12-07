@@ -8,24 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		1507F68ED264D34A0C3F0F6C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDCFFEE162EC0D3DCE94B3F /* libPods.a */; };
+		224259DF1C140CED00D868BF /* ZGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224259DE1C140CED00D868BF /* ZGNavigationController.m */; };
+		224259E51C14373100D868BF /* ZGHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 224259E41C14373100D868BF /* ZGHttpTool.m */; };
+		224259E81C1470B900D868BF /* ZGScenicTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 224259E71C1470B900D868BF /* ZGScenicTool.m */; };
+		224259EB1C14786300D868BF /* ZGScenicSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = 224259EA1C14786300D868BF /* ZGScenicSimple.m */; };
+		226F8B1D1C15566400D3589A /* ZGMainTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F8B1C1C15566400D3589A /* ZGMainTableController.m */; };
+		226F8B201C155FAD00D3589A /* ZGScenicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 224259ED1C14820F00D868BF /* ZGScenicCell.m */; };
+		226F8B231C15623F00D3589A /* ZGImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F8B221C15623F00D3589A /* ZGImageTool.m */; };
 		2276FA561BFC29DF00C6FC07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2276FA551BFC29DF00C6FC07 /* Assets.xcassets */; };
 		2276FA591BFC29DF00C6FC07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2276FA571BFC29DF00C6FC07 /* LaunchScreen.storyboard */; };
 		227E14391BFC2CD9001E6FBB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E142C1BFC2CD9001E6FBB /* main.m */; };
-		227E143E1BFC2EE9001E6FBB /* ZGMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E143C1BFC2EE9001E6FBB /* ZGMainViewController.m */; };
-		227E143F1BFC2EE9001E6FBB /* ZGMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227E143D1BFC2EE9001E6FBB /* ZGMainViewController.xib */; };
 		227E14441BFC2F4A001E6FBB /* ZGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E14431BFC2F4A001E6FBB /* ZGAppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1E140ECF6FEA2345FB8451BE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		224259DD1C140CED00D868BF /* ZGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGNavigationController.h; sourceTree = "<group>"; };
+		224259DE1C140CED00D868BF /* ZGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGNavigationController.m; sourceTree = "<group>"; };
+		224259E31C14373100D868BF /* ZGHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGHttpTool.h; sourceTree = "<group>"; };
+		224259E41C14373100D868BF /* ZGHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGHttpTool.m; sourceTree = "<group>"; };
+		224259E61C1470B900D868BF /* ZGScenicTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGScenicTool.h; sourceTree = "<group>"; };
+		224259E71C1470B900D868BF /* ZGScenicTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGScenicTool.m; sourceTree = "<group>"; };
+		224259E91C14786300D868BF /* ZGScenicSimple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGScenicSimple.h; sourceTree = "<group>"; };
+		224259EA1C14786300D868BF /* ZGScenicSimple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGScenicSimple.m; sourceTree = "<group>"; };
+		224259EC1C14820F00D868BF /* ZGScenicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGScenicCell.h; sourceTree = "<group>"; };
+		224259ED1C14820F00D868BF /* ZGScenicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGScenicCell.m; sourceTree = "<group>"; };
+		226F8B1B1C15566400D3589A /* ZGMainTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGMainTableController.h; sourceTree = "<group>"; };
+		226F8B1C1C15566400D3589A /* ZGMainTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGMainTableController.m; sourceTree = "<group>"; };
+		226F8B211C15623F00D3589A /* ZGImageTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGImageTool.h; sourceTree = "<group>"; };
+		226F8B221C15623F00D3589A /* ZGImageTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGImageTool.m; sourceTree = "<group>"; };
 		2276FA461BFC29DE00C6FC07 /* 景点助手.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "景点助手.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2276FA551BFC29DF00C6FC07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2276FA581BFC29DF00C6FC07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2276FA5A1BFC29DF00C6FC07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		227E142C1BFC2CD9001E6FBB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		227E143B1BFC2EE9001E6FBB /* ZGMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGMainViewController.h; sourceTree = "<group>"; };
-		227E143C1BFC2EE9001E6FBB /* ZGMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGMainViewController.m; sourceTree = "<group>"; };
-		227E143D1BFC2EE9001E6FBB /* ZGMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZGMainViewController.xib; sourceTree = "<group>"; };
 		227E14421BFC2F4A001E6FBB /* ZGAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGAppDelegate.h; sourceTree = "<group>"; };
 		227E14431BFC2F4A001E6FBB /* ZGAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGAppDelegate.m; sourceTree = "<group>"; };
 		3E473DFA3AD8154573EF4717 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -44,6 +60,157 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		224259CE1C140C7000D868BF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				224259CF1C140C7000D868BF /* Controller */,
+				224259D01C140C7000D868BF /* Model */,
+				224259D11C140C7000D868BF /* Tool */,
+				224259D21C140C7000D868BF /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		224259CF1C140C7000D868BF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				224259DD1C140CED00D868BF /* ZGNavigationController.h */,
+				224259DE1C140CED00D868BF /* ZGNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		224259D01C140C7000D868BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		224259D11C140C7000D868BF /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				224259E31C14373100D868BF /* ZGHttpTool.h */,
+				224259E41C14373100D868BF /* ZGHttpTool.m */,
+				226F8B211C15623F00D3589A /* ZGImageTool.h */,
+				226F8B221C15623F00D3589A /* ZGImageTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		224259D21C140C7000D868BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		224259D31C140CB000D868BF /* Found */ = {
+			isa = PBXGroup;
+			children = (
+				224259D41C140CB000D868BF /* Controller */,
+				224259D51C140CB000D868BF /* Model */,
+				224259D61C140CB000D868BF /* Tool */,
+				224259D71C140CB000D868BF /* View */,
+			);
+			name = Found;
+			path = Main/Found;
+			sourceTree = "<group>";
+		};
+		224259D41C140CB000D868BF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		224259D51C140CB000D868BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		224259D61C140CB000D868BF /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		224259D71C140CB000D868BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		224259D81C140CC500D868BF /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				224259D91C140CC500D868BF /* Controller */,
+				224259DA1C140CC500D868BF /* Model */,
+				224259DB1C140CC500D868BF /* Tool */,
+				224259DC1C140CC500D868BF /* View */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		224259D91C140CC500D868BF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		224259DA1C140CC500D868BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		224259DB1C140CC500D868BF /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		224259DC1C140CC500D868BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		224259E01C14255800D868BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				224259E91C14786300D868BF /* ZGScenicSimple.h */,
+				224259EA1C14786300D868BF /* ZGScenicSimple.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		224259E11C14255800D868BF /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				224259E61C1470B900D868BF /* ZGScenicTool.h */,
+				224259E71C1470B900D868BF /* ZGScenicTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		224259E21C14255800D868BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				224259EC1C14820F00D868BF /* ZGScenicCell.h */,
+				224259ED1C14820F00D868BF /* ZGScenicCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2276FA3D1BFC29DE00C6FC07 = {
 			isa = PBXGroup;
 			children = (
@@ -84,100 +251,22 @@
 		227E14111BFC2CD9001E6FBB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				227E14121BFC2CD9001E6FBB /* Base */,
+				224259CE1C140C7000D868BF /* Base */,
 				227E14201BFC2CD9001E6FBB /* Main */,
-				227E14191BFC2CD9001E6FBB /* Found */,
-				227E142D1BFC2CD9001E6FBB /* Setting */,
+				224259D81C140CC500D868BF /* Setting */,
+				224259D31C140CB000D868BF /* Found */,
 				227E14291BFC2CD9001E6FBB /* Other */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		227E14121BFC2CD9001E6FBB /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				227E14131BFC2CD9001E6FBB /* Controller */,
-				227E14141BFC2CD9001E6FBB /* Model */,
-				227E14151BFC2CD9001E6FBB /* Tool */,
-				227E14181BFC2CD9001E6FBB /* View */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		227E14131BFC2CD9001E6FBB /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		227E14141BFC2CD9001E6FBB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		227E14151BFC2CD9001E6FBB /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
-		227E14181BFC2CD9001E6FBB /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		227E14191BFC2CD9001E6FBB /* Found */ = {
-			isa = PBXGroup;
-			children = (
-				227E141A1BFC2CD9001E6FBB /* Controller */,
-				227E141B1BFC2CD9001E6FBB /* Model */,
-				227E141C1BFC2CD9001E6FBB /* Tool */,
-				227E141F1BFC2CD9001E6FBB /* View */,
-			);
-			path = Found;
-			sourceTree = "<group>";
-		};
-		227E141A1BFC2CD9001E6FBB /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		227E141B1BFC2CD9001E6FBB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		227E141C1BFC2CD9001E6FBB /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
-		227E141F1BFC2CD9001E6FBB /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		227E14201BFC2CD9001E6FBB /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				227E14211BFC2CD9001E6FBB /* Controller */,
-				227E14241BFC2CD9001E6FBB /* Model */,
-				227E14251BFC2CD9001E6FBB /* Tool */,
-				227E14281BFC2CD9001E6FBB /* View */,
+				224259E01C14255800D868BF /* Model */,
+				224259E11C14255800D868BF /* Tool */,
+				224259E21C14255800D868BF /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -185,32 +274,10 @@
 		227E14211BFC2CD9001E6FBB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				227E143B1BFC2EE9001E6FBB /* ZGMainViewController.h */,
-				227E143C1BFC2EE9001E6FBB /* ZGMainViewController.m */,
-				227E143D1BFC2EE9001E6FBB /* ZGMainViewController.xib */,
+				226F8B1B1C15566400D3589A /* ZGMainTableController.h */,
+				226F8B1C1C15566400D3589A /* ZGMainTableController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		227E14241BFC2CD9001E6FBB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		227E14251BFC2CD9001E6FBB /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
-		227E14281BFC2CD9001E6FBB /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		227E14291BFC2CD9001E6FBB /* Other */ = {
@@ -221,45 +288,6 @@
 				227E14431BFC2F4A001E6FBB /* ZGAppDelegate.m */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		227E142D1BFC2CD9001E6FBB /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				227E142E1BFC2CD9001E6FBB /* Controller */,
-				227E142F1BFC2CD9001E6FBB /* Model */,
-				227E14301BFC2CD9001E6FBB /* Tool */,
-				227E14331BFC2CD9001E6FBB /* View */,
-			);
-			path = Setting;
-			sourceTree = "<group>";
-		};
-		227E142E1BFC2CD9001E6FBB /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		227E142F1BFC2CD9001E6FBB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		227E14301BFC2CD9001E6FBB /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
-		227E14331BFC2CD9001E6FBB /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		75BD468B7F18CE0FDCEA8F9E /* Pods */ = {
@@ -340,7 +368,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				227E143F1BFC2EE9001E6FBB /* ZGMainViewController.xib in Resources */,
 				2276FA591BFC29DF00C6FC07 /* LaunchScreen.storyboard in Resources */,
 				2276FA561BFC29DF00C6FC07 /* Assets.xcassets in Resources */,
 			);
@@ -401,8 +428,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				227E143E1BFC2EE9001E6FBB /* ZGMainViewController.m in Sources */,
+				224259EB1C14786300D868BF /* ZGScenicSimple.m in Sources */,
+				224259E51C14373100D868BF /* ZGHttpTool.m in Sources */,
+				226F8B201C155FAD00D3589A /* ZGScenicCell.m in Sources */,
+				224259DF1C140CED00D868BF /* ZGNavigationController.m in Sources */,
+				226F8B1D1C15566400D3589A /* ZGMainTableController.m in Sources */,
+				224259E81C1470B900D868BF /* ZGScenicTool.m in Sources */,
 				227E14391BFC2CD9001E6FBB /* main.m in Sources */,
+				226F8B231C15623F00D3589A /* ZGImageTool.m in Sources */,
 				227E14441BFC2F4A001E6FBB /* ZGAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

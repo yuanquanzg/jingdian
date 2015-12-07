@@ -7,7 +7,8 @@
 //
 
 #import "ZGAppDelegate.h"
-#import "ZGMainViewController.h"
+#import "ZGMainTableController.h"
+#import "ZGNavigationController.h"
 
 @implementation ZGAppDelegate
 
@@ -19,8 +20,9 @@
     //便捷方法，去使被使用对象的主窗口显示到屏幕的最前端
     [self.window makeKeyAndVisible];
     
-    ZGMainViewController *main = [[ZGMainViewController alloc]init];
-    [self.window setRootViewController:main];
+    ZGMainTableController *main = [[ZGMainTableController alloc]init];
+    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:main];
+    [self.window setRootViewController:nv];
 
     return YES;
 }
