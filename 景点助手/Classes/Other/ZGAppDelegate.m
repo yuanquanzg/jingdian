@@ -9,6 +9,7 @@
 #import "ZGAppDelegate.h"
 #import "ZGMainTableController.h"
 #import "ZGNavigationController.h"
+#import "ZGHotelTableController.h"
 
 @implementation ZGAppDelegate
 
@@ -16,12 +17,16 @@
     
     //实例化Window
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window setBackgroundColor:[UIColor whiteColor]];
 
     //便捷方法，去使被使用对象的主窗口显示到屏幕的最前端
     [self.window makeKeyAndVisible];
     
     ZGMainTableController *main = [[ZGMainTableController alloc]init];
     ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:main];
+
+//    ZGHotelTableController *hotel = [[ZGHotelTableController alloc]init];
+//    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:hotel];
     [self.window setRootViewController:nv];
 
     return YES;

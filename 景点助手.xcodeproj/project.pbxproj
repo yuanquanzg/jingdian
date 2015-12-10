@@ -10,15 +10,21 @@
 		1507F68ED264D34A0C3F0F6C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDCFFEE162EC0D3DCE94B3F /* libPods.a */; };
 		224259DF1C140CED00D868BF /* ZGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224259DE1C140CED00D868BF /* ZGNavigationController.m */; };
 		224259E51C14373100D868BF /* ZGHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 224259E41C14373100D868BF /* ZGHttpTool.m */; };
-		224259E81C1470B900D868BF /* ZGScenicTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 224259E71C1470B900D868BF /* ZGScenicTool.m */; };
-		224259EB1C14786300D868BF /* ZGScenicSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = 224259EA1C14786300D868BF /* ZGScenicSimple.m */; };
-		226F8B1D1C15566400D3589A /* ZGMainTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F8B1C1C15566400D3589A /* ZGMainTableController.m */; };
-		226F8B201C155FAD00D3589A /* ZGScenicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 224259ED1C14820F00D868BF /* ZGScenicCell.m */; };
-		226F8B231C15623F00D3589A /* ZGImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F8B221C15623F00D3589A /* ZGImageTool.m */; };
 		2276FA561BFC29DF00C6FC07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2276FA551BFC29DF00C6FC07 /* Assets.xcassets */; };
 		2276FA591BFC29DF00C6FC07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2276FA571BFC29DF00C6FC07 /* LaunchScreen.storyboard */; };
 		227E14391BFC2CD9001E6FBB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E142C1BFC2CD9001E6FBB /* main.m */; };
 		227E14441BFC2F4A001E6FBB /* ZGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E14431BFC2F4A001E6FBB /* ZGAppDelegate.m */; };
+		22806C441C16A1F3002F4F4F /* ZGHotelTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22806C431C16A1F3002F4F4F /* ZGHotelTableController.m */; };
+		22806C611C17FB10002F4F4F /* ZGMainTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22806C521C17FB10002F4F4F /* ZGMainTableController.m */; };
+		22806C621C17FB10002F4F4F /* ZGScenicDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 22806C551C17FB10002F4F4F /* ZGScenicDetail.m */; };
+		22806C631C17FB10002F4F4F /* ZGScenicSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = 22806C571C17FB10002F4F4F /* ZGScenicSimple.m */; };
+		22806C641C17FB10002F4F4F /* ZGScenicTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 22806C5A1C17FB10002F4F4F /* ZGScenicTool.m */; };
+		22806C651C17FB10002F4F4F /* ZGScenicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22806C5D1C17FB10002F4F4F /* ZGScenicCell.m */; };
+		22806C741C180228002F4F4F /* ZGDetailTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22806C731C180228002F4F4F /* ZGDetailTableController.m */; };
+		22806C771C1804B2002F4F4F /* ZGDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22806C761C1804B2002F4F4F /* ZGDetailCell.m */; };
+		22806C7A1C1804F1002F4F4F /* ZGPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22806C791C1804F1002F4F4F /* ZGPageView.m */; };
+		22806C7D1C180507002F4F4F /* ZGHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22806C7C1C180507002F4F4F /* ZGHeaderView.m */; };
+		22806C801C181740002F4F4F /* UIImageView+ZGTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 22806C7F1C181740002F4F4F /* UIImageView+ZGTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,16 +33,6 @@
 		224259DE1C140CED00D868BF /* ZGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGNavigationController.m; sourceTree = "<group>"; };
 		224259E31C14373100D868BF /* ZGHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGHttpTool.h; sourceTree = "<group>"; };
 		224259E41C14373100D868BF /* ZGHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGHttpTool.m; sourceTree = "<group>"; };
-		224259E61C1470B900D868BF /* ZGScenicTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGScenicTool.h; sourceTree = "<group>"; };
-		224259E71C1470B900D868BF /* ZGScenicTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGScenicTool.m; sourceTree = "<group>"; };
-		224259E91C14786300D868BF /* ZGScenicSimple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGScenicSimple.h; sourceTree = "<group>"; };
-		224259EA1C14786300D868BF /* ZGScenicSimple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGScenicSimple.m; sourceTree = "<group>"; };
-		224259EC1C14820F00D868BF /* ZGScenicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGScenicCell.h; sourceTree = "<group>"; };
-		224259ED1C14820F00D868BF /* ZGScenicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGScenicCell.m; sourceTree = "<group>"; };
-		226F8B1B1C15566400D3589A /* ZGMainTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGMainTableController.h; sourceTree = "<group>"; };
-		226F8B1C1C15566400D3589A /* ZGMainTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGMainTableController.m; sourceTree = "<group>"; };
-		226F8B211C15623F00D3589A /* ZGImageTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGImageTool.h; sourceTree = "<group>"; };
-		226F8B221C15623F00D3589A /* ZGImageTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGImageTool.m; sourceTree = "<group>"; };
 		2276FA461BFC29DE00C6FC07 /* 景点助手.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "景点助手.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2276FA551BFC29DF00C6FC07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2276FA581BFC29DF00C6FC07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +40,28 @@
 		227E142C1BFC2CD9001E6FBB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		227E14421BFC2F4A001E6FBB /* ZGAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGAppDelegate.h; sourceTree = "<group>"; };
 		227E14431BFC2F4A001E6FBB /* ZGAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGAppDelegate.m; sourceTree = "<group>"; };
+		22806C421C16A1F3002F4F4F /* ZGHotelTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGHotelTableController.h; sourceTree = "<group>"; };
+		22806C431C16A1F3002F4F4F /* ZGHotelTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGHotelTableController.m; sourceTree = "<group>"; };
+		22806C511C17FB10002F4F4F /* ZGMainTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGMainTableController.h; sourceTree = "<group>"; };
+		22806C521C17FB10002F4F4F /* ZGMainTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGMainTableController.m; sourceTree = "<group>"; };
+		22806C541C17FB10002F4F4F /* ZGScenicDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGScenicDetail.h; sourceTree = "<group>"; };
+		22806C551C17FB10002F4F4F /* ZGScenicDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGScenicDetail.m; sourceTree = "<group>"; };
+		22806C561C17FB10002F4F4F /* ZGScenicSimple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGScenicSimple.h; sourceTree = "<group>"; };
+		22806C571C17FB10002F4F4F /* ZGScenicSimple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGScenicSimple.m; sourceTree = "<group>"; };
+		22806C591C17FB10002F4F4F /* ZGScenicTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGScenicTool.h; sourceTree = "<group>"; };
+		22806C5A1C17FB10002F4F4F /* ZGScenicTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGScenicTool.m; sourceTree = "<group>"; };
+		22806C5C1C17FB10002F4F4F /* ZGScenicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGScenicCell.h; sourceTree = "<group>"; };
+		22806C5D1C17FB10002F4F4F /* ZGScenicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGScenicCell.m; sourceTree = "<group>"; };
+		22806C721C180228002F4F4F /* ZGDetailTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGDetailTableController.h; sourceTree = "<group>"; };
+		22806C731C180228002F4F4F /* ZGDetailTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGDetailTableController.m; sourceTree = "<group>"; };
+		22806C751C1804B2002F4F4F /* ZGDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGDetailCell.h; sourceTree = "<group>"; };
+		22806C761C1804B2002F4F4F /* ZGDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGDetailCell.m; sourceTree = "<group>"; };
+		22806C781C1804F1002F4F4F /* ZGPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGPageView.h; sourceTree = "<group>"; };
+		22806C791C1804F1002F4F4F /* ZGPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGPageView.m; sourceTree = "<group>"; };
+		22806C7B1C180507002F4F4F /* ZGHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGHeaderView.h; sourceTree = "<group>"; };
+		22806C7C1C180507002F4F4F /* ZGHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGHeaderView.m; sourceTree = "<group>"; };
+		22806C7E1C181740002F4F4F /* UIImageView+ZGTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ZGTool.h"; sourceTree = "<group>"; };
+		22806C7F1C181740002F4F4F /* UIImageView+ZGTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ZGTool.m"; sourceTree = "<group>"; };
 		3E473DFA3AD8154573EF4717 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5EDCFFEE162EC0D3DCE94B3F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,8 +110,8 @@
 			children = (
 				224259E31C14373100D868BF /* ZGHttpTool.h */,
 				224259E41C14373100D868BF /* ZGHttpTool.m */,
-				226F8B211C15623F00D3589A /* ZGImageTool.h */,
-				226F8B221C15623F00D3589A /* ZGImageTool.m */,
+				22806C7E1C181740002F4F4F /* UIImageView+ZGTool.h */,
+				22806C7F1C181740002F4F4F /* UIImageView+ZGTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -184,33 +202,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		224259E01C14255800D868BF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				224259E91C14786300D868BF /* ZGScenicSimple.h */,
-				224259EA1C14786300D868BF /* ZGScenicSimple.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		224259E11C14255800D868BF /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-				224259E61C1470B900D868BF /* ZGScenicTool.h */,
-				224259E71C1470B900D868BF /* ZGScenicTool.m */,
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
-		224259E21C14255800D868BF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				224259EC1C14820F00D868BF /* ZGScenicCell.h */,
-				224259ED1C14820F00D868BF /* ZGScenicCell.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		2276FA3D1BFC29DE00C6FC07 = {
 			isa = PBXGroup;
 			children = (
@@ -252,32 +243,15 @@
 			isa = PBXGroup;
 			children = (
 				224259CE1C140C7000D868BF /* Base */,
-				227E14201BFC2CD9001E6FBB /* Main */,
+				22806C3D1C16A05D002F4F4F /* Home */,
+				22806C4B1C17FB10002F4F4F /* Main */,
+				22806C381C16A005002F4F4F /* City */,
+				22806C331C169FFA002F4F4F /* Hotel */,
 				224259D81C140CC500D868BF /* Setting */,
 				224259D31C140CB000D868BF /* Found */,
 				227E14291BFC2CD9001E6FBB /* Other */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		227E14201BFC2CD9001E6FBB /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				227E14211BFC2CD9001E6FBB /* Controller */,
-				224259E01C14255800D868BF /* Model */,
-				224259E11C14255800D868BF /* Tool */,
-				224259E21C14255800D868BF /* View */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		227E14211BFC2CD9001E6FBB /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				226F8B1B1C15566400D3589A /* ZGMainTableController.h */,
-				226F8B1C1C15566400D3589A /* ZGMainTableController.m */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		227E14291BFC2CD9001E6FBB /* Other */ = {
@@ -288,6 +262,310 @@
 				227E14431BFC2F4A001E6FBB /* ZGAppDelegate.m */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		22806C331C169FFA002F4F4F /* Hotel */ = {
+			isa = PBXGroup;
+			children = (
+				22806C341C169FFA002F4F4F /* Controller */,
+				22806C351C169FFA002F4F4F /* Model */,
+				22806C361C169FFA002F4F4F /* Tool */,
+				22806C371C169FFA002F4F4F /* View */,
+			);
+			path = Hotel;
+			sourceTree = "<group>";
+		};
+		22806C341C169FFA002F4F4F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22806C421C16A1F3002F4F4F /* ZGHotelTableController.h */,
+				22806C431C16A1F3002F4F4F /* ZGHotelTableController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22806C351C169FFA002F4F4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22806C361C169FFA002F4F4F /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		22806C371C169FFA002F4F4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22806C381C16A005002F4F4F /* City */ = {
+			isa = PBXGroup;
+			children = (
+				22806C391C16A005002F4F4F /* Controller */,
+				22806C3A1C16A005002F4F4F /* Model */,
+				22806C3B1C16A005002F4F4F /* Tool */,
+				22806C3C1C16A005002F4F4F /* View */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
+		22806C391C16A005002F4F4F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22806C3A1C16A005002F4F4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22806C3B1C16A005002F4F4F /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		22806C3C1C16A005002F4F4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22806C3D1C16A05D002F4F4F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				22806C3E1C16A05D002F4F4F /* Controller */,
+				22806C3F1C16A05D002F4F4F /* Model */,
+				22806C401C16A05D002F4F4F /* Tool */,
+				22806C411C16A05D002F4F4F /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		22806C3E1C16A05D002F4F4F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22806C3F1C16A05D002F4F4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22806C401C16A05D002F4F4F /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		22806C411C16A05D002F4F4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22806C4B1C17FB10002F4F4F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				22806C4D1C17FB10002F4F4F /* Scenic */,
+				22806C4C1C17FB10002F4F4F /* Introduce */,
+				22806C5E1C17FB10002F4F4F /* Traffic */,
+				22806C5F1C17FB10002F4F4F /* Weather */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		22806C4C1C17FB10002F4F4F /* Introduce */ = {
+			isa = PBXGroup;
+			children = (
+				22806C661C17FB5D002F4F4F /* Controller */,
+				22806C671C17FB5D002F4F4F /* Model */,
+				22806C681C17FB5D002F4F4F /* Tool */,
+				22806C691C17FB5D002F4F4F /* View */,
+			);
+			path = Introduce;
+			sourceTree = "<group>";
+		};
+		22806C4D1C17FB10002F4F4F /* Scenic */ = {
+			isa = PBXGroup;
+			children = (
+				22806C4E1C17FB10002F4F4F /* Controller */,
+				22806C531C17FB10002F4F4F /* Model */,
+				22806C581C17FB10002F4F4F /* Tool */,
+				22806C5B1C17FB10002F4F4F /* View */,
+			);
+			path = Scenic;
+			sourceTree = "<group>";
+		};
+		22806C4E1C17FB10002F4F4F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22806C511C17FB10002F4F4F /* ZGMainTableController.h */,
+				22806C521C17FB10002F4F4F /* ZGMainTableController.m */,
+				22806C721C180228002F4F4F /* ZGDetailTableController.h */,
+				22806C731C180228002F4F4F /* ZGDetailTableController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22806C531C17FB10002F4F4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22806C541C17FB10002F4F4F /* ZGScenicDetail.h */,
+				22806C551C17FB10002F4F4F /* ZGScenicDetail.m */,
+				22806C561C17FB10002F4F4F /* ZGScenicSimple.h */,
+				22806C571C17FB10002F4F4F /* ZGScenicSimple.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22806C581C17FB10002F4F4F /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				22806C591C17FB10002F4F4F /* ZGScenicTool.h */,
+				22806C5A1C17FB10002F4F4F /* ZGScenicTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		22806C5B1C17FB10002F4F4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22806C5C1C17FB10002F4F4F /* ZGScenicCell.h */,
+				22806C5D1C17FB10002F4F4F /* ZGScenicCell.m */,
+				22806C751C1804B2002F4F4F /* ZGDetailCell.h */,
+				22806C761C1804B2002F4F4F /* ZGDetailCell.m */,
+				22806C781C1804F1002F4F4F /* ZGPageView.h */,
+				22806C791C1804F1002F4F4F /* ZGPageView.m */,
+				22806C7B1C180507002F4F4F /* ZGHeaderView.h */,
+				22806C7C1C180507002F4F4F /* ZGHeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22806C5E1C17FB10002F4F4F /* Traffic */ = {
+			isa = PBXGroup;
+			children = (
+				22806C6A1C17FB74002F4F4F /* Controller */,
+				22806C6B1C17FB74002F4F4F /* Model */,
+				22806C6C1C17FB74002F4F4F /* Tool */,
+				22806C6D1C17FB74002F4F4F /* View */,
+			);
+			path = Traffic;
+			sourceTree = "<group>";
+		};
+		22806C5F1C17FB10002F4F4F /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				22806C6E1C17FB84002F4F4F /* Controller */,
+				22806C6F1C17FB84002F4F4F /* Model */,
+				22806C701C17FB84002F4F4F /* Tool */,
+				22806C711C17FB84002F4F4F /* View */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		22806C661C17FB5D002F4F4F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22806C671C17FB5D002F4F4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22806C681C17FB5D002F4F4F /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		22806C691C17FB5D002F4F4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22806C6A1C17FB74002F4F4F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22806C6B1C17FB74002F4F4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22806C6C1C17FB74002F4F4F /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		22806C6D1C17FB74002F4F4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22806C6E1C17FB84002F4F4F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22806C6F1C17FB84002F4F4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22806C701C17FB84002F4F4F /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		22806C711C17FB84002F4F4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		75BD468B7F18CE0FDCEA8F9E /* Pods */ = {
@@ -428,15 +706,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				224259EB1C14786300D868BF /* ZGScenicSimple.m in Sources */,
+				22806C771C1804B2002F4F4F /* ZGDetailCell.m in Sources */,
+				22806C741C180228002F4F4F /* ZGDetailTableController.m in Sources */,
+				22806C441C16A1F3002F4F4F /* ZGHotelTableController.m in Sources */,
 				224259E51C14373100D868BF /* ZGHttpTool.m in Sources */,
-				226F8B201C155FAD00D3589A /* ZGScenicCell.m in Sources */,
 				224259DF1C140CED00D868BF /* ZGNavigationController.m in Sources */,
-				226F8B1D1C15566400D3589A /* ZGMainTableController.m in Sources */,
-				224259E81C1470B900D868BF /* ZGScenicTool.m in Sources */,
+				22806C801C181740002F4F4F /* UIImageView+ZGTool.m in Sources */,
+				22806C641C17FB10002F4F4F /* ZGScenicTool.m in Sources */,
+				22806C7D1C180507002F4F4F /* ZGHeaderView.m in Sources */,
+				22806C611C17FB10002F4F4F /* ZGMainTableController.m in Sources */,
+				22806C631C17FB10002F4F4F /* ZGScenicSimple.m in Sources */,
+				22806C7A1C1804F1002F4F4F /* ZGPageView.m in Sources */,
 				227E14391BFC2CD9001E6FBB /* main.m in Sources */,
-				226F8B231C15623F00D3589A /* ZGImageTool.m in Sources */,
 				227E14441BFC2F4A001E6FBB /* ZGAppDelegate.m in Sources */,
+				22806C621C17FB10002F4F4F /* ZGScenicDetail.m in Sources */,
+				22806C651C17FB10002F4F4F /* ZGScenicCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
