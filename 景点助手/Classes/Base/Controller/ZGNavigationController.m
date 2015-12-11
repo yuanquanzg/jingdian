@@ -17,8 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    //修改全局navigationBar的颜色
-    [[UINavigationBar appearance] setBarTintColor:[UIColor redColor]];
+      //修改全局navigationBar的颜色
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"bar_backgroundImage_deselect.png"] forBarMetrics:UIBarMetricsDefault];
     
     //修改全局navigationBar标题字体颜色
     [[UINavigationBar appearance] setTitleTextAttributes:@{
@@ -27,7 +27,13 @@
     
     //修改全局navigationBar返回按钮字体颜色
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+}
 
+
+//设置状态栏的（亮色）白色
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,11 +41,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-//设置状态栏的（亮色）白色
--(UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
 
 /*
 #pragma mark - Navigation

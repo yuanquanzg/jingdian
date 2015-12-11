@@ -15,9 +15,9 @@
 
 @interface ZGScenicDetail : NSObject
 
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *referral;
-@property (strong, nonatomic) NSString *imageUrl;
+@property (strong, nonatomic) NSString *name;   //名称
+@property (strong, nonatomic) NSString *referral;   //简介
+@property (strong, nonatomic) NSString *imageUrl;   //图片路径
 
 
 - (instancetype)initWithDic:(NSDictionary *)dic;

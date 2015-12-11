@@ -40,17 +40,14 @@
     //取出imageUrl
     _imageArray = [NSMutableArray array];
     for (ZGScenicDetail *detail in detailArray) {
-        NSLog(@"%@", detail.imageUrl);
 //        UIImageView *imageView = [[UIImageView alloc]init];
 //        [imageView loadImageWithUrl:detail.imageUrl];
 //        [_imageArray addObject:imageView ];
         [_imageArray addObject:detail.imageUrl];
     }
     
-    NSLog(@"%@", _imageArray);
-    
     // 设置时钟动画 定时器
-    _timer = [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(update:) userInfo:nil repeats:YES];
+//    _timer = [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(update:) userInfo:nil repeats:YES];
     // 将定时器添加到主线程
 //    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 
@@ -95,7 +92,6 @@
         }else if (i == _imageArray.count -1) {
             UIImageView *imgViewFirst = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
             [imgViewFirst loadImageWithUrl:_imageArray[_imageArray.count - 1]];
-            NSLog(@"%@", _imageArray[_imageArray.count - 1]);
             [_scrollView addSubview:imgViewFirst];
         }
         

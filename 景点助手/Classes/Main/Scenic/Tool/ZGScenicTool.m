@@ -15,9 +15,11 @@
 
 + (void)ScenicWithPage:(NSInteger)page success:(ScenicSuccessBlock)success failure:(ScenicFailureBlock)failure {
     
+    NSUserDefaults *defaults = [[NSUserDefaults alloc]init];
+    
     [ZGHttpTool getWithPath:@"/scenery" params:@{
-        @"pid":@24,
-        @"cid":@317,
+        @"pid":[defaults objectForKey:@"provinId"],
+        @"cid":[defaults objectForKey:@"cityId"],
         @"page":[NSString stringWithFormat:@"%ld", page]
     } success:^(id JSON) {
         //该数组用来存储返回的所有景点
@@ -52,9 +54,10 @@
     }success:^(id JSON) {
         //该数组用来存储返回景点详情
         NSMutableArray *detailArray = [NSMutableArray array];
-        
+
         if (![JSON[@"error_code"] isEqualToNumber:@0]) {
             NSLog(@"没有数据了");
+            NSLog(@"%@", JSON);
             success(detailArray);
             return;
         }

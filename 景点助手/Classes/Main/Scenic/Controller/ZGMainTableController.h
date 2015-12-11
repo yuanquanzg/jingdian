@@ -10,8 +10,8 @@
  分为推荐和所有
  */
 
-#import <UIKit/UIKit.h>
+#import "ZGTableViewController.h"
 
-@interface ZGMainTableController : UITableViewController
+@interface ZGMainTableController : ZGTableViewController
 
 @end

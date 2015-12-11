@@ -10,6 +10,7 @@
 #import "ZGMainTableController.h"
 #import "ZGNavigationController.h"
 #import "ZGHotelTableController.h"
+#import "ZGProvinTableController.h"
 
 @implementation ZGAppDelegate
 
@@ -27,6 +28,9 @@
 
 //    ZGHotelTableController *hotel = [[ZGHotelTableController alloc]init];
 //    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:hotel];
+    
+//    ZGProvinTableController *city = [[ZGProvinTableController alloc]init];
+//    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:city];
     [self.window setRootViewController:nv];
 
     return YES;

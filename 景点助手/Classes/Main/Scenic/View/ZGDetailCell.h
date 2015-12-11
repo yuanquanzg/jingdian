@@ -11,7 +11,11 @@
  */
 
 #import <UIKit/UIKit.h>
+@class ZGScenicDetail;
 
 @interface ZGDetailCell : UITableViewCell
 
++ (instancetype)initWithTableView:(UITableView *)tableView scenicDetail:(ZGScenicDetail *)detail;
+
++ (CGFloat)heightForCellWidthScenicDetail:(ZGScenicDetail *)detail width:(CGFloat)width;
 @end

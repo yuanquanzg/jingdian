@@ -7,7 +7,6 @@
 //
 
 #import "ZGMainTableController.h"
-#import "MBProgressHUD.h"
 #import "ZGScenicTool.h"
 #import "ZGScenicCell.h"
 #import "ZGScenicSimple.h"
@@ -18,7 +17,7 @@
 
 @property (strong, nonatomic) UISegmentedControl *titleSegment; //导航栏的titileView
 @property (strong, nonatomic) UITableView *contentView; //内容列表
-@property (strong, nonatomic) MBProgressHUD *loadHud;   //加载提示
+//@property (strong, nonatomic) MBProgressHUD *loadHud;   //加载提示
 
 @property (strong, nonatomic) NSMutableArray *scenicArray;  //请求返回的景点数据
 
@@ -40,18 +39,21 @@
     
     _page = 1;
     
+    [self.loadHud setHidden:NO];
+    
     [ZGScenicTool ScenicWithPage:_page success:^(NSMutableArray *scenicArray) {
         //如果返回的数组的元素个数位为0，则提示没有数据
         if (scenicArray.count == 0) {
             [self.tableView.mj_footer endRefreshingWithNoMoreData];
+            [self.loadHud setHidden:YES];
             return;
         }
         _scenicArray = scenicArray;
-        [self.tableView reloadData];
-        [_loadHud setHidden:YES];
         _page++;
-    } failure:^(NSError *error) {
-        
+        [self.tableView reloadData];
+        [self.loadHud setHidden:YES];
+     } failure:^(NSError *error) {
+        [self.loadHud setHidden:YES];
     }];
 }
 
@@ -62,17 +64,13 @@
     //解决tableView顶部被NavigationBar遮盖的问题
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
+    //解决显示多余cell的问题
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     
     //集成MJRefresh的上拉刷新
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
 
-    //初始化加载提示
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode = MBProgressHUDModeIndeterminate;
-    hud.labelText = @"努力加载中";
-    _loadHud = hud;
-    
+     
     //初始化navigationBar上的segementControl
     _titleSegment = [[UISegmentedControl alloc]initWithItems:@[@"推荐", @"所有"]];
     [_titleSegment setTintColor:[UIColor colorWithRed:0.5 green:0.0 blue:0.0 alpha:0.5]];

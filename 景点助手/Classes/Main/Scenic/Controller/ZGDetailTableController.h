@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZGDetailTableController : UITableViewController
+@interface ZGDetailTableController : UIViewController
 
 @property (strong, nonatomic) NSString  *scenicId;
 
