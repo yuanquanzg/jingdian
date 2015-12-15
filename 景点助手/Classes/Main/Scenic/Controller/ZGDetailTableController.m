@@ -14,6 +14,9 @@
 #import "ZGDetailCell.h"
 #import "ZGBottomView.h"
 
+#import "ZGWeatherTableController.h"
+#import "ZGPriceTableController.h"
+
 @interface ZGDetailTableController ()<ZGHeaderViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) MBProgressHUD *loadHud;   //加载提示
@@ -43,7 +46,7 @@ const static CGFloat  otherCellHeight = 100;    //其他Cell的高度
   
     [self.loadHud setHidden:NO];
     
-    [ZGScenicTool DetailWithScenicId:_scenicId success:^(NSMutableArray *detailArray) {
+    [ZGScenicTool detailWithScenicId:_scenicId success:^(NSMutableArray *detailArray) {
         _detailArray = detailArray;
         [self.tableView reloadData];
         [self.loadHud setHidden:YES];
@@ -58,6 +61,13 @@ const static CGFloat  otherCellHeight = 100;    //其他Cell的高度
     
     self.title = @"景点详情";
     
+    //不显示竖向滑动条
+    self.tableView.showsVerticalScrollIndicator = NO;
+    
+    //不显示无数据的cell
+    self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
+
+    
     //初始化加载提示
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;
@@ -70,7 +80,7 @@ const static CGFloat  otherCellHeight = 100;    //其他Cell的高度
     _tableView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_tableView];
     
-    _bottomView = [[ZGBottomView alloc]init];
+    _bottomView = [[ZGBottomView alloc]initWithScebicId:self.scenicId];
     _bottomView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_bottomView];
     
@@ -155,6 +165,22 @@ const static CGFloat  otherCellHeight = 100;    //其他Cell的高度
 #pragma mark -- ZGHeaderViewDelegate
 - (void)clickHeaderButton:(UIButton *)btn {
     
+    if (btn.tag == 1) {
+        ZGPriceTableController *price = [[ZGPriceTableController alloc]init];
+        
+        //取出景点详情中的最后一张图片，做为priceController中的展示图片
+        if (_detailArray.count == 0) {
+            price.imageStr = @"";
+        }else {
+            ZGScenicDetail *detail =   _detailArray[_detailArray.count - 1];
+            price.imageStr = detail.imageUrl;
+        }
+        price.scenicId = self.scenicId;
+        [self.navigationController pushViewController:price animated:YES];
+    }else if (btn.tag == 3) {
+        ZGWeatherTableController *weather = [[ZGWeatherTableController alloc] init];
+        [self.navigationController pushViewController:weather animated:YES];
+    }
 }
 
 

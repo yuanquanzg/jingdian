@@ -11,6 +11,9 @@
 #import "ZGNavigationController.h"
 #import "ZGHotelTableController.h"
 #import "ZGProvinTableController.h"
+#import "ZGWeatherTableController.h"
+#import "ZGPriceTableController.h"
+#import "ZGHotelTableController.h"
 
 @implementation ZGAppDelegate
 
@@ -23,14 +26,25 @@
     //便捷方法，去使被使用对象的主窗口显示到屏幕的最前端
     [self.window makeKeyAndVisible];
     
-    ZGMainTableController *main = [[ZGMainTableController alloc]init];
-    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:main];
+//    ZGMainTableController *main = [[ZGMainTableController alloc]init];
+//    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:main];
 
 //    ZGHotelTableController *hotel = [[ZGHotelTableController alloc]init];
 //    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:hotel];
     
 //    ZGProvinTableController *city = [[ZGProvinTableController alloc]init];
 //    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:city];
+    
+//    ZGWeatherTableController *weather = [[ZGWeatherTableController alloc]init];
+//    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:weather];
+    
+//    ZGPriceTableController *price = [[ZGPriceTableController alloc]init];
+//    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:price];
+    
+    ZGHotelTableController *hotel = [[ZGHotelTableController alloc]init];
+    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:hotel];
+
+    
     [self.window setRootViewController:nv];
 
     return YES;

@@ -12,12 +12,12 @@
 #import "ZGScenicSimple.h"
 #import "MJRefresh.h"
 #import "ZGDetailTableController.h"
+#import "ZGDataTool.h"
 
 @interface ZGMainTableController ()
 
 @property (strong, nonatomic) UISegmentedControl *titleSegment; //导航栏的titileView
 @property (strong, nonatomic) UITableView *contentView; //内容列表
-//@property (strong, nonatomic) MBProgressHUD *loadHud;   //加载提示
 
 @property (strong, nonatomic) NSMutableArray *scenicArray;  //请求返回的景点数据
 
@@ -41,13 +41,14 @@
     
     [self.loadHud setHidden:NO];
     
-    [ZGScenicTool ScenicWithPage:_page success:^(NSMutableArray *scenicArray) {
+    [ZGScenicTool scenicWithPage:_page success:^(NSMutableArray *scenicArray) {
         //如果返回的数组的元素个数位为0，则提示没有数据
         if (scenicArray.count == 0) {
             [self.tableView.mj_footer endRefreshingWithNoMoreData];
             [self.loadHud setHidden:YES];
             return;
         }
+        
         _scenicArray = scenicArray;
         _page++;
         [self.tableView reloadData];
@@ -59,10 +60,15 @@
 
 - (void)buildView {
     
-    [self.view setBackgroundColor:[UIColor blackColor]];
+//    [self.view setBackgroundColor:[UIColor blackColor]];
 
+    self.title = @"景点";
+    
     //解决tableView顶部被NavigationBar遮盖的问题
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    //不显示竖向滑动条
+    self.tableView.showsVerticalScrollIndicator = NO;
     
     //解决显示多余cell的问题
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
@@ -108,20 +114,27 @@
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     NSInteger number = 10;
-    if (_titleSegment.selectedSegmentIndex == 0) {
-        number = 10;
-        if (_scenicArray.count < 10) {
+    if (_scenicArray.count == 0) {
+        number = 0;
+    }else {
+        if (_titleSegment.selectedSegmentIndex == 0) {
+            number = 10;
+            if (_scenicArray.count < 10) {
+                number = _scenicArray.count;
+            }
+        }else {
             number = _scenicArray.count;
         }
-    }else {
-        number = _scenicArray.count;
     }
-    return number;
+      return number;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return _scenicArray.count;
-    return 1;
+    NSInteger count = 1;
+    if (_scenicArray.count == 0) {
+        count = 0;
+    }
+    return count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -173,7 +186,7 @@
         return;
     }else {
         [self.tableView.mj_footer beginRefreshing];
-        [ZGScenicTool ScenicWithPage:_page success:^(NSMutableArray *scenicArray) {
+        [ZGScenicTool scenicWithPage:_page success:^(NSMutableArray *scenicArray) {
             //如果返回的数组的元素个数位为0，则提示没有数据
             if (scenicArray.count == 0) {
                 [self.tableView.mj_footer endRefreshingWithNoMoreData];

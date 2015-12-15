@@ -9,11 +9,17 @@
 #import "ZGCityTool.h"
 #import "ZGHttpTool.h"
 #import "ZGCityModel.h"
+#import "ZGDataTool.h"
 
 @implementation ZGCityTool
 
 + (void)CityWithSuccess:(CitySuccessBlock)success failure:(CityFailureBlock)failure {
-    [ZGHttpTool getWithPath:@"/cityList" params:nil
+    
+    NSString *path = @"/cityList";
+    NSDictionary *params = @{};
+    
+    
+    [ZGHttpTool getWithPath:path params:params
     success:^(id JSON) {
         NSMutableArray *cityArray = [NSMutableArray array];
         
@@ -22,7 +28,11 @@
             success(cityArray);
             return;
         }
+   
+        //将取回来的数据存入文件中
+        [ZGDataTool saveDataWithPath:path params:params withData:JSON];
         
+        //处理数据
         NSArray *array = JSON[@"result"];
         for (NSDictionary *dic in array) {
             ZGCityModel *city = [[ZGCityModel alloc]initWithDic:dic];
@@ -30,7 +40,11 @@
         }
         success(cityArray);
     } failure:^(NSError *error) {
+        NSLog(@"%@", error);
         
+        //取出数据
+        NSDictionary * data = [ZGDataTool dataWithWithPath:path params:params];
+        NSLog(@"%@", data);
     }];
 }
 

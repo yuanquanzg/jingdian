@@ -25,8 +25,8 @@ typedef void(^DetailFailureBlock)(NSError *error);
 @interface ZGScenicTool : NSObject
 
 //返回景点列表
-+ (void)ScenicWithPage:(NSInteger)page success:(ScenicSuccessBlock)success failure:(ScenicFailureBlock)failure;
++ (void)scenicWithPage:(NSInteger)page success:(ScenicSuccessBlock)success failure:(ScenicFailureBlock)failure;
 
 //返回景点详情
-+ (void)DetailWithScenicId:(NSString *)scenicId success:(DetailSuccessBlock)success failure:(DetailFailureBlock)failure;
++ (void)detailWithScenicId:(NSString *)scenicId success:(DetailSuccessBlock)success failure:(DetailFailureBlock)failure;
 @end

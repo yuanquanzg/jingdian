@@ -18,4 +18,8 @@ typedef void(^HttpFailureBlock)(NSError *error);
 @interface ZGHttpTool : NSObject
 
 + (void)getWithPath:(NSString *)path params:(NSDictionary *)params success:(HttpSuccessBlock)success failure:(HttpFailureBlock)failure;
+
+//天气接口
++(void)weatherWithPath:(NSString *)path params:(NSDictionary *)params success:(HttpSuccessBlock)success failure:(HttpFailureBlock)failure;
+
 @end

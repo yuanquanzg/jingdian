@@ -16,16 +16,17 @@
 
 @end
 
+
 @implementation ZGBottomView
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
+- (instancetype)initWithScebicId:(NSString *)scenicId {
+    self = [super init];
     if (self) {
+        self.scenicId = scenicId;
         [self buildView];
     }
     return self;
 }
-
 
 - (void)buildView {
     
@@ -50,10 +51,14 @@
     _collectionButton = [ZGHeaderButton buttonWithType:UIButtonTypeRoundedRect];
     _collectionButton.backgroundColor = [UIColor whiteColor];
     [_collectionButton setTitleColor:[UIColor colorWithPatternImage:bgImage] forState:UIControlStateNormal];
-    [_collectionButton setImage:[[UIImage imageNamed:@"detail_collect_deselect.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
     [_collectionButton setTitle:@"收藏" forState:UIControlStateNormal];
     _collectionButton.translatesAutoresizingMaskIntoConstraints = NO;
     [_collectionButton addTarget:self action:@selector(clickCollection:) forControlEvents:UIControlEventTouchUpInside];
+    if ([self checkScenicId]) {
+        [_collectionButton setImage:[[UIImage imageNamed:@"detail_collect_select.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+    }else {
+        [_collectionButton setImage:[[UIImage imageNamed:@"detail_collect_deselect.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+    }
     [self addSubview:_collectionButton];
     
 }
@@ -78,10 +83,109 @@
 }
 
 - (void)clickCollection:(UIButton *)btn {
-    
+    if ([self checkScenicId]) {
+           [_collectionButton setImage:[[UIImage imageNamed:@"detail_collect_deselect.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+        [self removeScenic];
+    }else {
+        [_collectionButton setImage:[[UIImage imageNamed:@"detail_collect_select.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+        [self saveScenic];
+    }
 }
 
 - (void)clickShare:(UIButton *)btn {
     [self.delegate clickShareButton:btn];
 }
+
+//把收藏的景点存入文件
+- (void)saveScenic {
+    
+    NSString *fileName = @"cllectionScenic";
+    
+    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,YES);
+    
+    //fileName就是保存文件的文件名，filePath是文件的具体路径
+    NSString *documentPath =[documentPaths objectAtIndex:0];
+    
+    //fileName就是保存文件的文件名,filepath是文件的具体路径
+    NSString *filePath=[documentPath stringByAppendingPathComponent:fileName];
+    
+    //    NSLog(@"fileName:%@    filePath:%@", fileName, filePath);
+    
+    //检查如果文件是空的，那么初始化数组，添加ID，存入file
+    NSMutableArray *array = [NSMutableArray arrayWithContentsOfFile:filePath];
+    if (array == nil) {
+        array = [NSMutableArray array];
+    }
+    
+    [array addObject:self.scenicId];
+    
+    [array writeToFile:filePath atomically:YES];
+
+}
+
+//检查是否已经收藏
+- (BOOL)checkScenicId {
+    
+    BOOL flag = NO;
+    
+    NSMutableArray *array = [self getCollectionArray];
+    for (NSString *str in array) {
+        if ([str isEqualToString:self.scenicId]) {
+            flag = YES;
+        }
+    }
+    return flag;
+}
+
+
+- (NSMutableArray *)getCollectionArray {
+    NSString *fileName = @"cllectionScenic";
+    
+    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,YES);
+    
+    //fileName就是保存文件的文件名，filePath是文件的具体路径
+    NSString *documentPath =[documentPaths objectAtIndex:0];
+    
+    //fileName就是保存文件的文件名,filepath是文件的具体路径
+    NSString *filePath=[documentPath stringByAppendingPathComponent:fileName];
+    
+    //    NSLog(@"fileName:%@    filePath:%@", fileName, filePath);
+    
+    //检查如果文件是空的，那么初始化数组，添加ID，存入file
+    NSMutableArray *array = [NSMutableArray arrayWithContentsOfFile:filePath];
+    if (array == nil) {
+        array = [NSMutableArray array];
+    }
+
+    return array;
+}
+
+//移除存储的景点
+- (void)removeScenic {
+    NSString *fileName = @"cllectionScenic";
+    
+    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,YES);
+    
+    //fileName就是保存文件的文件名，filePath是文件的具体路径
+    NSString *documentPath =[documentPaths objectAtIndex:0];
+    
+    //fileName就是保存文件的文件名,filepath是文件的具体路径
+    NSString *filePath=[documentPath stringByAppendingPathComponent:fileName];
+    
+    //    NSLog(@"fileName:%@    filePath:%@", fileName, filePath);
+    
+    //检查如果文件是空的，那么初始化数组，添加ID，存入file
+    NSMutableArray *array = [NSMutableArray arrayWithContentsOfFile:filePath];
+    if (array == nil) {
+        array = [NSMutableArray array];
+    }
+
+    for (NSString *str in array) {
+        if ([str isEqualToString:self.scenicId]) {
+            [array removeObject:str];
+        }
+    }
+    [array writeToFile:filePath atomically:YES];
+}
+
 @end

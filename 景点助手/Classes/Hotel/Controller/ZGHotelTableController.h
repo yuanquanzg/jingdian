@@ -6,8 +6,8 @@
 //  Copyright © 2015年 赵志刚. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ZGTableViewController.h"
 
-@interface ZGHotelTableController : UITableViewController
+@interface ZGHotelTableController : ZGTableViewController
 
 @end
