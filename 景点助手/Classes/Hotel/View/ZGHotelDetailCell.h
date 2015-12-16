@@ -7,7 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ZGHotelDetail;
+
+typedef NS_ENUM(NSInteger, ZGHotelDetailCellButtonTag) {
+    ZGHotelDetailCellButtonphone,          // phoneButton
+    ZGHotelDetailCellButtonIntro,        // introButton
+};
+
+@protocol ZGHotelDetailCellDelegate <NSObject>
+
+- (void)clickHotelDetailCellButton:(UIButton *)btn;
+
+@end
 
 @interface ZGHotelDetailCell : UITableViewCell
+
+@property (weak, nonatomic) id<ZGHotelDetailCellDelegate> delegate;
+
++ (instancetype)initWithTableView:(UITableView *)tableView hotelDetail:(ZGHotelDetail *)hotelDetail hotelName:(NSString *)hotelName;
 
 @end

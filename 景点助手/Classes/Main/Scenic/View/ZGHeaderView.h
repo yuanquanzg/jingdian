@@ -11,6 +11,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, ZGScenicDetailHeaderViewButtonTag) {
+    ZGScenicDetailHeaderViewButtonPrice,          // priceButton
+    ZGScenicDetailHeaderViewButtonTraffic,        // trafficeButton
+    ZGScenicDetailHeaderViewButtonWeather     // weatherButton
+};
+
 @protocol ZGHeaderViewDelegate <NSObject>
 
 - (void)clickHeaderButton:(UIButton *)btn;

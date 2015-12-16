@@ -8,10 +8,12 @@
 
 #import "ZGTableViewController.h"
 
-@interface ZGHotelDetailController : ZGTableViewController
+@interface ZGHotelDetailController : UIViewController
 
 @property (strong, nonatomic) NSString *hotelId;
 
 @property (strong, nonatomic) NSString *imageUrl;
+
+@property (strong, nonatomic) NSString *hotelName;
 
 @end

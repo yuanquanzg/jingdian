@@ -27,6 +27,18 @@
     }
 }
 
+- (void)setIntro:(NSString *)intro {
+    if (_intro.length == 0) {
+        if (intro.length == 0) {
+            _intro = @"暂无信息";
+        }else {
+            NSLog(@"%@", intro);
+            _intro = [intro stringByReplacingOccurrencesOfString:@"<br>" withString:@"\n"];
+            _intro = [_intro stringByReplacingOccurrencesOfString:@"　" withString:@""];
+        }
+    }
+}
+
 - (NSString *)description {
     return  [NSString stringWithFormat:@"%@, %@, %@", self.intro, self.phoneNumber, self.imageUrl];
 }

@@ -96,7 +96,9 @@
     ZGHotelModel *hotel = _hotelArray[indexPath.row];
     detail.hotelId = hotel.hotelId;
     detail.imageUrl = hotel.hotelImage;
+    detail.hotelName = hotel.hotelName;
     [self.navigationController pushViewController:detail animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark -- MJRefresh

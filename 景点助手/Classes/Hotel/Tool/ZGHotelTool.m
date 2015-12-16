@@ -11,6 +11,7 @@
 #import "ZGHotelModel.h"
 #import "ZGDataTool.h"
 #import "ZGHotelDetail.h"
+#import "ZGRoomModel.h"
 
 @implementation ZGHotelTool
 
@@ -86,6 +87,15 @@
         success(hotelDeatil);
     } failure:^(NSError *error) {
         
+        ZGHotelDetail *hotelDeatil;
+        //将取回来的数据存入文件中
+        NSDictionary *dict = [ZGDataTool dataWithWithPath:path params:params];
+        
+        hotelDeatil =  [[ZGHotelDetail alloc]initWithDic:dict[@"result"] iamgeUrl:imageUrl];
+        
+        success(hotelDeatil);
+
+        
     }];
     
 }
@@ -93,6 +103,47 @@
 //返回酒店房间信息
 + (void)roomWithId:(NSString *)hotelID success:(RoomSuccessBlock)success failure:(RoomFailureBlock)failure {
     
+    NSString *path = @"/Hotel";
+    NSDictionary *params = @{@"hid":hotelID};
+    
+    [ZGHttpTool getWithPath:path params:params
+    success:^(id JSON) {
+        
+        NSMutableArray *roomArray = [NSMutableArray array];
+        if (![JSON[@"error_code"] isEqualToNumber:@0]) {
+            NSLog(@"出错了");
+            success(roomArray);
+            return;
+        }
+        
+        //将取回来的数据存入文件中
+        [ZGDataTool saveDataWithPath:path params:params withData:JSON];
+     
+        //处理数据
+        NSArray *array = JSON[@"result"];
+        for (NSDictionary *dic in array) {
+            ZGRoomModel *room = [[ZGRoomModel alloc]initWithDic:dic];
+            [roomArray addObject:room];
+        }
+        
+        success(roomArray);
+        
+    } failure:^(NSError *error) {
+        NSMutableArray *roomArray = [NSMutableArray array];
+
+        //将取回来的数据存入文件中
+        NSDictionary *dict = [ZGDataTool dataWithWithPath:path params:params];
+        
+        //处理数据
+        NSArray *array = dict[@"result"];
+        for (NSDictionary *dic in array) {
+            ZGRoomModel *room = [[ZGRoomModel alloc]initWithDic:dic];
+            [roomArray addObject:room];
+        }
+        
+        success(roomArray);
+        
+    }];
 }
 
 @end

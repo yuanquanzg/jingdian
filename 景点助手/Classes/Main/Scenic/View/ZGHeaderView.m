@@ -35,13 +35,12 @@
     self.layer.shadowRadius = 0.2;
     self.clipsToBounds = NO;
     
-    
     self.backgroundColor = [UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:0.8];
     UIImage *bgImage = [UIImage imageNamed:@"bar_backgroundImage_deselect"];
     
     _priceBtn = [ZGHeaderButton buttonWithType:UIButtonTypeRoundedRect];
     [_priceBtn setBackgroundColor:[UIColor whiteColor]];
-    [_priceBtn setTag:1];
+    [_priceBtn setTag:ZGScenicDetailHeaderViewButtonPrice];
     [_priceBtn setTitle:@"票价" forState:UIControlStateNormal];
     [_priceBtn setTitleColor:[UIColor colorWithPatternImage:bgImage] forState:UIControlStateNormal];
     [_priceBtn setImage:[[UIImage imageNamed:@"detail_price_deselect.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
@@ -50,7 +49,7 @@
    
     _trafficBtn = [ZGHeaderButton buttonWithType:UIButtonTypeRoundedRect];
     [_trafficBtn setBackgroundColor:[UIColor whiteColor]];
-    [_trafficBtn setTag:2];
+    [_trafficBtn setTag:ZGScenicDetailHeaderViewButtonTraffic];
     [_trafficBtn setTitle:@"交通" forState:UIControlStateNormal];
     [_trafficBtn setTitleColor:[UIColor colorWithPatternImage:bgImage] forState:UIControlStateNormal];
     [_trafficBtn setImage:[[UIImage imageNamed:@"detail_traffic_deselect"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
@@ -59,7 +58,7 @@
 
     _weatherBtn = [ZGHeaderButton buttonWithType:UIButtonTypeRoundedRect];
     [_weatherBtn setBackgroundColor:[UIColor whiteColor]];
-    [_weatherBtn setTag:3];
+    [_weatherBtn setTag:ZGScenicDetailHeaderViewButtonWeather];
     [_weatherBtn setTitle:@"天气" forState:UIControlStateNormal];
     [_weatherBtn setTitleColor:[UIColor colorWithPatternImage:bgImage] forState:UIControlStateNormal];
     [_weatherBtn setImage:[[UIImage imageNamed:@"detail_weather_deselect"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];

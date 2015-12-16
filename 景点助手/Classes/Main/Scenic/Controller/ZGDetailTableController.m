@@ -31,6 +31,8 @@ const static CGFloat imageCellHeight = 200; //图片轮播的高度
 const static CGFloat  headerViewHeight = 50;    //三个Button的高度
 const static CGFloat  otherCellHeight = 100;    //其他Cell的高度
 
+//const static NSString *fileName = @"cllectionScenic";   //保存收藏景点的文件名称
+
 @implementation ZGDetailTableController
 
 - (void)viewDidLoad {
@@ -80,7 +82,7 @@ const static CGFloat  otherCellHeight = 100;    //其他Cell的高度
     _tableView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_tableView];
     
-    _bottomView = [[ZGBottomView alloc]initWithScebicId:self.scenicId];
+    _bottomView = [[ZGBottomView alloc]initWithId:self.scenicId fileName:@"cllectionScenic"];
     _bottomView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_bottomView];
     
@@ -165,7 +167,7 @@ const static CGFloat  otherCellHeight = 100;    //其他Cell的高度
 #pragma mark -- ZGHeaderViewDelegate
 - (void)clickHeaderButton:(UIButton *)btn {
     
-    if (btn.tag == 1) {
+    if (btn.tag == ZGScenicDetailHeaderViewButtonPrice) {
         ZGPriceTableController *price = [[ZGPriceTableController alloc]init];
         
         //取出景点详情中的最后一张图片，做为priceController中的展示图片
@@ -177,7 +179,7 @@ const static CGFloat  otherCellHeight = 100;    //其他Cell的高度
         }
         price.scenicId = self.scenicId;
         [self.navigationController pushViewController:price animated:YES];
-    }else if (btn.tag == 3) {
+    }else if (btn.tag == ZGScenicDetailHeaderViewButtonWeather) {
         ZGWeatherTableController *weather = [[ZGWeatherTableController alloc] init];
         [self.navigationController pushViewController:weather animated:YES];
     }

@@ -14,15 +14,19 @@
 @property (strong, nonatomic) ZGHeaderButton *shareButton;
 @property (strong, nonatomic) ZGHeaderButton *collectionButton;
 
+@property (strong, nonatomic) NSString *fileName;
+@property (strong, nonatomic) NSString *Id;
+
 @end
 
 
 @implementation ZGBottomView
 
-- (instancetype)initWithScebicId:(NSString *)scenicId {
+- (instancetype)initWithId:(NSString *)Id fileName:(NSString *)fileName{
     self = [super init];
     if (self) {
-        self.scenicId = scenicId;
+        self.Id = Id;
+        self.fileName = fileName;
         [self buildView];
     }
     return self;
@@ -99,7 +103,8 @@
 //把收藏的景点存入文件
 - (void)saveScenic {
     
-    NSString *fileName = @"cllectionScenic";
+//    NSString *fileName = @"cllectionScenic";
+    NSString *fileName = _fileName;
     
     NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,YES);
     
@@ -117,7 +122,7 @@
         array = [NSMutableArray array];
     }
     
-    [array addObject:self.scenicId];
+    [array addObject:self.Id];
     
     [array writeToFile:filePath atomically:YES];
 
@@ -130,7 +135,7 @@
     
     NSMutableArray *array = [self getCollectionArray];
     for (NSString *str in array) {
-        if ([str isEqualToString:self.scenicId]) {
+        if ([str isEqualToString:self.Id]) {
             flag = YES;
         }
     }
@@ -139,7 +144,7 @@
 
 
 - (NSMutableArray *)getCollectionArray {
-    NSString *fileName = @"cllectionScenic";
+    NSString *fileName = _fileName;
     
     NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,YES);
     
@@ -162,7 +167,7 @@
 
 //移除存储的景点
 - (void)removeScenic {
-    NSString *fileName = @"cllectionScenic";
+    NSString *fileName = _fileName;
     
     NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,YES);
     
@@ -172,19 +177,22 @@
     //fileName就是保存文件的文件名,filepath是文件的具体路径
     NSString *filePath=[documentPath stringByAppendingPathComponent:fileName];
     
-    //    NSLog(@"fileName:%@    filePath:%@", fileName, filePath);
+//    NSLog(@"fileName:%@    filePath:%@", fileName, filePath);
     
     //检查如果文件是空的，那么初始化数组，添加ID，存入file
     NSMutableArray *array = [NSMutableArray arrayWithContentsOfFile:filePath];
     if (array == nil) {
         array = [NSMutableArray array];
     }
-
-    for (NSString *str in array) {
-        if ([str isEqualToString:self.scenicId]) {
+    
+    //此处不应该使用快速遍历的方法，这样会造成数组在不同线程中同时操作的错误
+    for (int i = 0; i < array.count; i++) {
+        NSString *str = array[i];
+        if ([str isEqualToString:self.Id]) {
             [array removeObject:str];
         }
     }
+    
     [array writeToFile:filePath atomically:YES];
 }
 

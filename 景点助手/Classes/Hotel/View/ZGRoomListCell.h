@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ZGRoomDetail;
 
 @interface ZGRoomListCell : UITableViewCell
+
++ (instancetype)initWithTableView:(UITableView *)tableView RoomDetail:(ZGRoomDetail *)roomDetail;
+
+
+//获得Cell高度
++ (CGFloat)heightWithRoomDetail:(ZGRoomDetail *)roomDetail width:(CGFloat)width;
 
 @end

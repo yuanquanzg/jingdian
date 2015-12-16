@@ -16,10 +16,8 @@
 
 @interface ZGBottomView : UIView
 
-@property (strong, nonatomic) NSString *scenicId;
-
 @property (weak, nonatomic) id<ZGBottomViewDelegate> delegate;
 
-- (instancetype)initWithScebicId:(NSString *)scenicId;
+- (instancetype)initWithId:(NSString *)Id fileName:(NSString *)fileName;
 
 @end
