@@ -32,7 +32,7 @@
         if (intro.length == 0) {
             _intro = @"暂无信息";
         }else {
-            NSLog(@"%@", intro);
+//            NSLog(@"%@", intro);
             _intro = [intro stringByReplacingOccurrencesOfString:@"<br>" withString:@"\n"];
             _intro = [_intro stringByReplacingOccurrencesOfString:@"　" withString:@""];
         }

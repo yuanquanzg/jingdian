@@ -14,7 +14,8 @@
 #import "ZGRoomDetail.h"
 #import "ZGHotelHeaderView.h"
 #import "ZGRoomListCell.h"
-#import "ZGBottomView.h"
+#import "ZGCollectionModel.h"
+#import "ZGCellectShareView.h"
 #import "ZGHotelIntroViewController.h"
 
 @interface ZGHotelDetailController ()<ZGHotelHeaderViewDelegate, ZGHotelDetailCellDelegate, UITableViewDataSource, UITableViewDelegate>
@@ -26,7 +27,7 @@
 
 @property (strong, nonatomic) UITableView *tableView;
 
-@property (strong, nonatomic) ZGBottomView *bottomView; //底部分享与收藏按钮
+@property (strong, nonatomic) ZGCellectShareView *bottomView; //底部分享与收藏按钮
 
 
 @end
@@ -40,8 +41,8 @@ const static CGFloat  bottomViewHeight = 50;    //底部收藏和分享的按钮
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self initData];
     [self buildView];
+    [self initData];
 }
 
 - (void)initData {
@@ -80,6 +81,12 @@ const static CGFloat  bottomViewHeight = 50;    //底部收藏和分享的按钮
 
 - (void)buildView {
     
+    _tableView = [[UITableView alloc]init];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:_tableView];
+    
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
 
     self.title = @"酒店详情";
@@ -97,13 +104,8 @@ const static CGFloat  bottomViewHeight = 50;    //底部收藏和分享的按钮
     hud.labelText = @"努力加载中";
     _loadHud = hud;
     
-    _tableView = [[UITableView alloc]init];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    _tableView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:_tableView];
-    
-    _bottomView = [[ZGBottomView alloc]initWithId:self.hotelId fileName:@"cllectionHotel"];
+    ZGCollectionModel *collectModel = [[ZGCollectionModel alloc]initWithId:self.hotelId imageUrl:self.imageUrl name:self.hotelName];
+    _bottomView = [[ZGCellectShareView alloc]initWithCollectionModel:collectModel fileName:@"cllectionHotel"];
     _bottomView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_bottomView];
     

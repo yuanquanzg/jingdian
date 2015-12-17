@@ -54,7 +54,7 @@
     //fileName就是保存文件的文件名，filePath是文件的具体路径
     NSString *filePath=[documentPath stringByAppendingPathComponent:fileName];
     
-   NSLog(@"fileName:%@    filePath:%@", fileName, filePath);
+//   NSLog(@"fileName:%@    filePath:%@", fileName, filePath);
     
     //从FileName中读取出数据
     NSData *data = [NSData dataWithContentsOfFile:filePath];

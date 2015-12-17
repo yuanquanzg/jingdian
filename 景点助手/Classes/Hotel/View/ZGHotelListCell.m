@@ -49,8 +49,6 @@
         UIImageView *accView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"hotel_cell_accessoryView"]];
         accView.frame = CGRectMake(0, 0, 20, 20);
         self.accessoryView = accView;
-        
-//        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     return self;
 }

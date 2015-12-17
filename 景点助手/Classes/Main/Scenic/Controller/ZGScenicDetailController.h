@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZGDetailTableController : UIViewController
+@interface ZGScenicDetailController : UIViewController
 
 @property (strong, nonatomic) NSString  *scenicId;
+
+@property (strong, nonatomic) NSString *imageUrl;
+
+@property (strong,nonatomic) NSString *scenicName;
 
 @end

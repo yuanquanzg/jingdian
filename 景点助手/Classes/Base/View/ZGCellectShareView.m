@@ -6,31 +6,34 @@
 //  Copyright © 2015年 赵志刚. All rights reserved.
 //
 
-#import "ZGBottomView.h"
-#import "ZGHeaderButton.h"
+#import "ZGCellectShareView.h"
+#import "ZGButton.h"
+#import "ZGCollectionModel.h"
 
-@interface ZGBottomView ()
+@interface ZGCellectShareView ()
 
-@property (strong, nonatomic) ZGHeaderButton *shareButton;
-@property (strong, nonatomic) ZGHeaderButton *collectionButton;
+@property (strong, nonatomic) ZGButton *shareButton;
+@property (strong, nonatomic) ZGButton *collectionButton;
 
 @property (strong, nonatomic) NSString *fileName;
-@property (strong, nonatomic) NSString *Id;
+//@property (strong, nonatomic) NSString *Id;
+@property (strong, nonatomic) ZGCollectionModel *model;
 
 @end
 
 
-@implementation ZGBottomView
+@implementation ZGCellectShareView
 
-- (instancetype)initWithId:(NSString *)Id fileName:(NSString *)fileName{
+- (instancetype)initWithCollectionModel:(ZGCollectionModel *)model fileName:(NSString *)fileName {
     self = [super init];
     if (self) {
-        self.Id = Id;
+        self.model = model;
         self.fileName = fileName;
         [self buildView];
     }
     return self;
 }
+
 
 - (void)buildView {
     
@@ -43,7 +46,7 @@
     self.backgroundColor = [UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:0.8];
     UIImage *bgImage = [UIImage imageNamed:@"bar_backgroundImage_deselect"];
     
-    _shareButton = [ZGHeaderButton buttonWithType:UIButtonTypeRoundedRect];
+    _shareButton = [ZGButton buttonWithType:UIButtonTypeRoundedRect];
     _shareButton.backgroundColor = [UIColor whiteColor];
     [_shareButton setTitleColor:[UIColor colorWithPatternImage:bgImage] forState:UIControlStateNormal];
     [_shareButton setImage:[[UIImage imageNamed:@"detail_share_deselect.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
@@ -52,7 +55,7 @@
     [_shareButton addTarget:self action:@selector(clickShare:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_shareButton];
     
-    _collectionButton = [ZGHeaderButton buttonWithType:UIButtonTypeRoundedRect];
+    _collectionButton = [ZGButton buttonWithType:UIButtonTypeRoundedRect];
     _collectionButton.backgroundColor = [UIColor whiteColor];
     [_collectionButton setTitleColor:[UIColor colorWithPatternImage:bgImage] forState:UIControlStateNormal];
     [_collectionButton setTitle:@"收藏" forState:UIControlStateNormal];
@@ -117,14 +120,20 @@
     //    NSLog(@"fileName:%@    filePath:%@", fileName, filePath);
     
     //检查如果文件是空的，那么初始化数组，添加ID，存入file
-    NSMutableArray *array = [NSMutableArray arrayWithContentsOfFile:filePath];
+    //从FileName中读取出数据
+    NSData *data1 = [NSData dataWithContentsOfFile:filePath];
+    NSMutableArray *array = (NSMutableArray*) [NSKeyedUnarchiver unarchiveObjectWithData:data1];
     if (array == nil) {
         array = [NSMutableArray array];
     }
     
-    [array addObject:self.Id];
+//    [array addObject:[NSDictionary dictionaryWithObjects:@[_model.thingId, _model.imageUrl, _model.thingName] forKeys:@[@"thingId", @"imageUrl", @"thingName"]]];
+    [array addObject:_model];
     
-    [array writeToFile:filePath atomically:YES];
+    NSData *data2 = [NSKeyedArchiver archivedDataWithRootObject:array];
+    
+    //将NSData类型对象data写入文件，文件名为fileName
+    [data2 writeToFile:filePath atomically:YES];
 
 }
 
@@ -134,8 +143,8 @@
     BOOL flag = NO;
     
     NSMutableArray *array = [self getCollectionArray];
-    for (NSString *str in array) {
-        if ([str isEqualToString:self.Id]) {
+    for (ZGCollectionModel *model in array) {
+        if ([model.thingId isEqualToString:_model.thingId]) {
             flag = YES;
         }
     }
@@ -157,7 +166,10 @@
     //    NSLog(@"fileName:%@    filePath:%@", fileName, filePath);
     
     //检查如果文件是空的，那么初始化数组，添加ID，存入file
-    NSMutableArray *array = [NSMutableArray arrayWithContentsOfFile:filePath];
+    //从FileName中读取出数据
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    NSMutableArray *array = (NSMutableArray*) [NSKeyedUnarchiver unarchiveObjectWithData:data];
+
     if (array == nil) {
         array = [NSMutableArray array];
     }
@@ -180,20 +192,26 @@
 //    NSLog(@"fileName:%@    filePath:%@", fileName, filePath);
     
     //检查如果文件是空的，那么初始化数组，添加ID，存入file
-    NSMutableArray *array = [NSMutableArray arrayWithContentsOfFile:filePath];
+    //从FileName中读取出数据
+    NSData *data1 = [NSData dataWithContentsOfFile:filePath];
+    NSMutableArray *array = (NSMutableArray*) [NSKeyedUnarchiver unarchiveObjectWithData:data1];
+
     if (array == nil) {
         array = [NSMutableArray array];
     }
     
     //此处不应该使用快速遍历的方法，这样会造成数组在不同线程中同时操作的错误
     for (int i = 0; i < array.count; i++) {
-        NSString *str = array[i];
-        if ([str isEqualToString:self.Id]) {
-            [array removeObject:str];
+        ZGCollectionModel *model = array[i];
+        if ([model.thingId isEqualToString:_model.thingId]) {
+            [array removeObject:model];
         }
     }
     
-    [array writeToFile:filePath atomically:YES];
+    NSData *data2 = [NSKeyedArchiver archivedDataWithRootObject:array];
+//    NSLog(@"%@", array);
+    
+    [data2 writeToFile:filePath atomically:YES];
 }
 
 @end

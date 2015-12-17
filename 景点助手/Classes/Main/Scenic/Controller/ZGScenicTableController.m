@@ -6,15 +6,15 @@
 //  Copyright © 2015年 赵志刚. All rights reserved.
 //
 
-#import "ZGMainTableController.h"
+#import "ZGScenicTableController.h"
 #import "ZGScenicTool.h"
 #import "ZGScenicCell.h"
 #import "ZGScenicSimple.h"
 #import "MJRefresh.h"
-#import "ZGDetailTableController.h"
+#import "ZGScenicDetailController.h"
 #import "ZGDataTool.h"
 
-@interface ZGMainTableController ()
+@interface ZGScenicTableController ()
 
 @property (strong, nonatomic) UISegmentedControl *titleSegment; //导航栏的titileView
 @property (strong, nonatomic) UITableView *contentView; //内容列表
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation ZGMainTableController
+@implementation ZGScenicTableController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -160,8 +160,10 @@
     
     ZGScenicSimple *scenic = _scenicArray[indexPath.section];
     
-    ZGDetailTableController *detail = [[ZGDetailTableController alloc]init];
+    ZGScenicDetailController *detail = [[ZGScenicDetailController alloc]init];
     detail.scenicId = scenic.scenicId;
+    detail.imageUrl = scenic.imageUrl;
+    detail.scenicName = scenic.name;
     [self.navigationController pushViewController:detail animated:YES];
 //    [self presentViewController:detail animated:YES completion:nil];
  

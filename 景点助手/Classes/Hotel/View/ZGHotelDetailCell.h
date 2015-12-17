@@ -5,6 +5,10 @@
 //  Created by ZZG on 15/12/15.
 //  Copyright © 2015年 赵志刚. All rights reserved.
 //
+/*
+ 此cell位于酒店详情页头部图片下面
+ 主要有两个Button 一个拨打电话，一个进入酒店详细介绍
+ */
 
 #import <UIKit/UIKit.h>
 @class ZGHotelDetail;

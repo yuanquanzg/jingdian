@@ -5,6 +5,9 @@
 //  Created by ZZG on 15/12/15.
 //  Copyright © 2015年 赵志刚. All rights reserved.
 //
+/*
+ 房间的详细信息，用于ZGRoomListCell
+ */
 
 #import <Foundation/Foundation.h>
 

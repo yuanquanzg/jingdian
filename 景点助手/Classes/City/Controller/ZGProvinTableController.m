@@ -42,7 +42,6 @@
         [self handleData:dataArray];
         [self.loadHud setHidden:YES];
         [self.tableView reloadData];
-        NSLog(@"tableVIew:%@", self.tableView);
     } failure:^(NSError *error) {
         [self.loadHud setHidden:YES];
     }];

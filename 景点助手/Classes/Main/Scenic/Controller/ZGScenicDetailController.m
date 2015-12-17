@@ -6,24 +6,25 @@
 //  Copyright © 2015年 赵志刚. All rights reserved.
 //
 
-#import "ZGDetailTableController.h"
+#import "ZGScenicDetailController.h"
 #import "MBProgressHUD.h"
 #import "ZGScenicTool.h"
 #import "ZGPageView.h"
 #import "ZGHeaderView.h"
 #import "ZGDetailCell.h"
-#import "ZGBottomView.h"
+#import "ZGCellectShareView.h"
+#import "ZGCollectionModel.h"
 
 #import "ZGWeatherTableController.h"
 #import "ZGPriceTableController.h"
 
-@interface ZGDetailTableController ()<ZGHeaderViewDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface ZGScenicDetailController ()<ZGHeaderViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) MBProgressHUD *loadHud;   //加载提示
 @property (strong, nonatomic) NSArray *detailArray; //详细数据数组
 @property (strong, nonatomic) UITableView *tableView;
 
-@property (strong, nonatomic) ZGBottomView *bottomView; //底部分享与收藏按钮
+@property (strong, nonatomic) ZGCellectShareView *bottomView; //底部分享与收藏按钮
 
 @end
 
@@ -33,7 +34,7 @@ const static CGFloat  otherCellHeight = 100;    //其他Cell的高度
 
 //const static NSString *fileName = @"cllectionScenic";   //保存收藏景点的文件名称
 
-@implementation ZGDetailTableController
+@implementation ZGScenicDetailController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -63,6 +64,12 @@ const static CGFloat  otherCellHeight = 100;    //其他Cell的高度
     
     self.title = @"景点详情";
     
+    _tableView = [[UITableView alloc]init];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:_tableView];
+    
     //不显示竖向滑动条
     self.tableView.showsVerticalScrollIndicator = NO;
     
@@ -75,14 +82,9 @@ const static CGFloat  otherCellHeight = 100;    //其他Cell的高度
     hud.mode = MBProgressHUDModeIndeterminate;
     hud.labelText = @"努力加载中";
     _loadHud = hud;
-
-    _tableView = [[UITableView alloc]init];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    _tableView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:_tableView];
     
-    _bottomView = [[ZGBottomView alloc]initWithId:self.scenicId fileName:@"cllectionScenic"];
+    ZGCollectionModel *cellocModel = [[ZGCollectionModel alloc]initWithId:self.scenicId imageUrl:self.imageUrl name:self.scenicName];
+    _bottomView = [[ZGCellectShareView alloc]initWithCollectionModel:cellocModel fileName:@"cllectionScenic"];
     _bottomView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_bottomView];
     
@@ -132,9 +134,7 @@ const static CGFloat  otherCellHeight = 100;    //其他Cell的高度
         cell = [ZGDetailCell initWithTableView:tableView scenicDetail:_detailArray[indexPath.row]];
 
     }
-    
-    // Configure the cell...
-    
+        
     return cell;
 }
 

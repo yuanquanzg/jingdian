@@ -12,6 +12,6 @@
 
 #import "ZGTableViewController.h"
 
-@interface ZGMainTableController : ZGTableViewController
+@interface ZGScenicTableController : ZGTableViewController
 
 @end

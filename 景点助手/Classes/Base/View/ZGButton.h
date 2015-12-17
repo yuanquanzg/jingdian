@@ -6,12 +6,12 @@
 //  Copyright © 2015年 赵志刚. All rights reserved.
 //
 /*
- HeaderView中的Button，主要修改图片与文字的位置
+ 自定义Button，主要修改图片与文字的位置
  */
 
 #import <UIKit/UIKit.h>
 
-@interface ZGHeaderButton : UIButton
+@interface ZGButton : UIButton
 
 
 

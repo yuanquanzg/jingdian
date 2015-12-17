@@ -10,7 +10,7 @@
 #import "UIImageView+ZGTool.h"
 #import "ZGHotelDetail.h"
 #import "ZGDetailLabel.h"
-#import "ZGHeaderButton.h"
+#import "ZGButton.h"
 
 @interface ZGHotelDetailCell ()
 
@@ -18,8 +18,8 @@
 //@property (strong, nonatomic) UILabel *numberNameLabel;
 //@property (strong, nonatomic) UILabel *numberLabel; //电话
 //@property (strong, nonatomic) ZGDetailLabel *introLabel;  //简介
-@property (strong, nonatomic) ZGHeaderButton *numberButton;   //拨打电话
-@property (strong, nonatomic) ZGHeaderButton *introButton;    //其他信息
+@property (strong, nonatomic) ZGButton *numberButton;   //拨打电话
+@property (strong, nonatomic) ZGButton *introButton;    //其他信息
 @property (strong, nonatomic) UILabel *hotelNameLabel;
 
 @end
@@ -82,7 +82,7 @@
     
     UIImage *bgImage = [UIImage imageNamed:@"bar_backgroundImage_deselect"];
     
-    _numberButton = [ZGHeaderButton buttonWithType:UIButtonTypeRoundedRect];
+    _numberButton = [ZGButton buttonWithType:UIButtonTypeRoundedRect];
     _numberButton.translatesAutoresizingMaskIntoConstraints = NO;
     [_numberButton setBackgroundColor:[UIColor whiteColor]];
     [_numberButton setTag:ZGHotelDetailCellButtonphone];
@@ -92,7 +92,7 @@
     [_numberButton addTarget:self action:@selector(clickHotelButton:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_numberButton];
     
-    _introButton = [ZGHeaderButton buttonWithType:UIButtonTypeRoundedRect];
+    _introButton = [ZGButton buttonWithType:UIButtonTypeRoundedRect];
     _introButton.translatesAutoresizingMaskIntoConstraints = NO;
     [_introButton setBackgroundColor:[UIColor whiteColor]];
     [_introButton setTag:ZGHotelDetailCellButtonIntro];

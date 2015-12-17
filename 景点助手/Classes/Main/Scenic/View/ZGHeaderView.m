@@ -7,13 +7,13 @@
 //
 
 #import "ZGHeaderView.h"
-#import "ZGHeaderButton.h"
+#import "ZGButton.h"
 
 @interface ZGHeaderView ()
 
-@property (strong, nonatomic) ZGHeaderButton *weatherBtn;
-@property (strong, nonatomic) ZGHeaderButton *priceBtn;
-@property (strong, nonatomic) ZGHeaderButton *trafficBtn;
+@property (strong, nonatomic) ZGButton *weatherBtn;
+@property (strong, nonatomic) ZGButton *priceBtn;
+@property (strong, nonatomic) ZGButton *trafficBtn;
 
 @end
 
@@ -38,7 +38,7 @@
     self.backgroundColor = [UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:0.8];
     UIImage *bgImage = [UIImage imageNamed:@"bar_backgroundImage_deselect"];
     
-    _priceBtn = [ZGHeaderButton buttonWithType:UIButtonTypeRoundedRect];
+    _priceBtn = [ZGButton buttonWithType:UIButtonTypeRoundedRect];
     [_priceBtn setBackgroundColor:[UIColor whiteColor]];
     [_priceBtn setTag:ZGScenicDetailHeaderViewButtonPrice];
     [_priceBtn setTitle:@"票价" forState:UIControlStateNormal];
@@ -47,7 +47,7 @@
     [_priceBtn addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_priceBtn];
    
-    _trafficBtn = [ZGHeaderButton buttonWithType:UIButtonTypeRoundedRect];
+    _trafficBtn = [ZGButton buttonWithType:UIButtonTypeRoundedRect];
     [_trafficBtn setBackgroundColor:[UIColor whiteColor]];
     [_trafficBtn setTag:ZGScenicDetailHeaderViewButtonTraffic];
     [_trafficBtn setTitle:@"交通" forState:UIControlStateNormal];
@@ -56,7 +56,7 @@
     [_trafficBtn addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_trafficBtn];
 
-    _weatherBtn = [ZGHeaderButton buttonWithType:UIButtonTypeRoundedRect];
+    _weatherBtn = [ZGButton buttonWithType:UIButtonTypeRoundedRect];
     [_weatherBtn setBackgroundColor:[UIColor whiteColor]];
     [_weatherBtn setTag:ZGScenicDetailHeaderViewButtonWeather];
     [_weatherBtn setTitle:@"天气" forState:UIControlStateNormal];
