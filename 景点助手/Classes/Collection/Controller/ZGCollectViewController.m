@@ -13,6 +13,7 @@
 #import "ZGScenicDetailController.h"
 #import "ZGHotelDetailController.h"
 #import "ZGCollectionModel.h"
+#import "RESideMenu.h"
 
 @interface ZGCollectViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -84,7 +85,18 @@ const static CGFloat KCollectionHeaderViewHeight = 10.0;
     [self selectSegmentChange:_titleSegment];
     
     self.navigationItem.titleView = _titleSegment;
-    
+  
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    //    [backButton setTitle:@"注册" forState:UIControlStateNormal];
+    [backButton setImage:[UIImage imageNamed:@"base_item_celan"] forState:UIControlStateNormal];
+    backButton.frame = CGRectMake(0, 0, 25, 25 );
+    //解决自定义UIBarbuttonItem向右偏移的问题
+    backButton.titleEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
+    [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(presentLeftMenuViewController:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc]initWithCustomView:backButton];
+    self.navigationItem.leftBarButtonItem = rightButton;
+
   
 }
 

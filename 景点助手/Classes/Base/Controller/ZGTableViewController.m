@@ -8,8 +8,10 @@
 
 #import "ZGTableViewController.h"
 #import "MBProgressHUD.h"
+#import "RESideMenu.h"
 
 @interface ZGTableViewController ()
+
 
 @end
 
@@ -27,11 +29,17 @@
 
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [backButton setTitle:@"注册" forState:UIControlStateNormal];
+    [backButton setImage:[UIImage imageNamed:@"base_item_celan"] forState:UIControlStateNormal];
+    backButton.frame = CGRectMake(0, 0, 25, 25 );
+    //解决自定义UIBarbuttonItem向右偏移的问题
+    backButton.titleEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
+    [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(presentLeftMenuViewController:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc]initWithCustomView:backButton];
+    self.navigationItem.leftBarButtonItem = rightButton;
+
 }
 
 - (void)didReceiveMemoryWarning {

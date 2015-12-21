@@ -57,6 +57,8 @@
 		22A8CA551C21481200D00EBC /* ZGHotelIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A8CA541C21481200D00EBC /* ZGHotelIntroViewController.m */; };
 		22A8CA5B1C21498A00D00EBC /* ZGHotelIntroTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A8CA5A1C21498A00D00EBC /* ZGHotelIntroTextView.m */; };
 		22AF81701C1D3D7B00ACF684 /* ZGDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AF816F1C1D3D7B00ACF684 /* ZGDataTool.m */; };
+		22B1E4971C22D69F0052471A /* ZGSettingTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B1E4961C22D69F0052471A /* ZGSettingTableController.m */; };
+		22B1E4A01C22DA5A0052471A /* ZGHomeMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B1E49F1C22DA5A0052471A /* ZGHomeMenuView.m */; };
 		22BB8D7B1C19C1DF008F59CE /* ZGDetailLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB8D7A1C19C1DF008F59CE /* ZGDetailLabel.m */; };
 		22BB8D811C19D455008F59CE /* ZGCityTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB8D801C19D455008F59CE /* ZGCityTableController.m */; };
 		22BB8D841C19D5FA008F59CE /* ZGCityTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB8D831C19D5FA008F59CE /* ZGCityTool.m */; };
@@ -163,6 +165,10 @@
 		22A8CA5A1C21498A00D00EBC /* ZGHotelIntroTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGHotelIntroTextView.m; sourceTree = "<group>"; };
 		22AF816E1C1D3D7B00ACF684 /* ZGDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGDataTool.h; sourceTree = "<group>"; };
 		22AF816F1C1D3D7B00ACF684 /* ZGDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGDataTool.m; sourceTree = "<group>"; };
+		22B1E4951C22D69F0052471A /* ZGSettingTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGSettingTableController.h; sourceTree = "<group>"; };
+		22B1E4961C22D69F0052471A /* ZGSettingTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGSettingTableController.m; sourceTree = "<group>"; };
+		22B1E49E1C22DA5A0052471A /* ZGHomeMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGHomeMenuView.h; sourceTree = "<group>"; };
+		22B1E49F1C22DA5A0052471A /* ZGHomeMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGHomeMenuView.m; sourceTree = "<group>"; };
 		22BB8D791C19C1DF008F59CE /* ZGDetailLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGDetailLabel.h; sourceTree = "<group>"; };
 		22BB8D7A1C19C1DF008F59CE /* ZGDetailLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGDetailLabel.m; sourceTree = "<group>"; };
 		22BB8D7F1C19D455008F59CE /* ZGCityTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGCityTableController.h; sourceTree = "<group>"; };
@@ -298,6 +304,8 @@
 		224259D91C140CC500D868BF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				22B1E4951C22D69F0052471A /* ZGSettingTableController.h */,
+				22B1E4961C22D69F0052471A /* ZGSettingTableController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -582,6 +590,8 @@
 		22806C411C16A05D002F4F4F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				22B1E49E1C22DA5A0052471A /* ZGHomeMenuView.h */,
+				22B1E49F1C22DA5A0052471A /* ZGHomeMenuView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -964,10 +974,12 @@
 				22807D761C21A660000A4829 /* ZGCollectionCell.m in Sources */,
 				22BB8D841C19D5FA008F59CE /* ZGCityTool.m in Sources */,
 				22807D731C21A635000A4829 /* ZGCollectionTool.m in Sources */,
+				22B1E4A01C22DA5A0052471A /* ZGHomeMenuView.m in Sources */,
 				22806C611C17FB10002F4F4F /* ZGScenicTableController.m in Sources */,
 				226539F71C1E79C900C0BA5C /* ZGPriceTableController.m in Sources */,
 				22806C631C17FB10002F4F4F /* ZGScenicSimple.m in Sources */,
 				22807D6A1C2197E7000A4829 /* ZGCollectionModel.m in Sources */,
+				22B1E4971C22D69F0052471A /* ZGSettingTableController.m in Sources */,
 				22843B921C1FAEDA002F1251 /* ZGRoomListCell.m in Sources */,
 				22806C7A1C1804F1002F4F4F /* ZGPageView.m in Sources */,
 				2286D9041C1C0A7E003BC385 /* ZGWeatherTool.m in Sources */,

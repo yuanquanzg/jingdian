@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ZGTableViewController.h"
 
-@interface ZGCityTableController : ZGTableViewController
+@interface ZGCityTableController : UITableViewController
 
 
-- (instancetype)initWithCityArray:(NSMutableArray *)cityArray;
+- (instancetype)initWithCityArray:(NSMutableArray *)cityArray button:(UIButton *)button;
 
 @end

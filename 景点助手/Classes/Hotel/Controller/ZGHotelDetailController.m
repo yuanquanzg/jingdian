@@ -231,7 +231,7 @@ const static CGFloat  bottomViewHeight = 50;    //底部收藏和分享的按钮
 //        [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
 //        [self.view addSubview:callWebview];
     }else if (btn.tag == ZGHotelDetailCellButtonIntro) {
-        NSLog(@"%@", _hotelDeatil.intro);
+      
         ZGHotelIntroViewController *introView = [[ZGHotelIntroViewController alloc]init];
         introView.intro = _hotelDeatil.intro;
         [self.navigationController pushViewController:introView animated:YES];

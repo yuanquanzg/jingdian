@@ -8,10 +8,14 @@
 
 #import "ZGCityTableController.h"
 #import "ZGCityModel.h"
+#import "ZGHomeMenuView.h"
+#import "RESideMenu.h"
 
 @interface ZGCityTableController ()
 
 @property (strong, nonatomic) NSArray *cityArray;
+
+@property (strong, nonatomic) UIButton *btn;
 
 @end
 
@@ -23,12 +27,14 @@
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
 }
 
-- (instancetype)initWithCityArray:(NSMutableArray *)cityArray {
+- (instancetype)initWithCityArray:(NSMutableArray *)cityArray button:(UIButton *)button{
     self = [super init];
     if (self) {
         self.cityArray = cityArray;
         ZGCityModel *city = cityArray[0];
         self.title  = city.cityName;
+        
+        _btn = button;
     }
     return  self;
 }
@@ -67,6 +73,15 @@
     [detault setObject:city.cityId forKey:@"cityId"];
     [detault setObject:city.provinId forKey:@"provinId"];
     [detault setObject:city.cityName forKey:@"cityName"];
+
+    [_btn setTitle:[NSString stringWithFormat:@"\t%@", city.cityName] forState:UIControlStateNormal];
+    
+//    [self.navigationController popToRootViewControllerAnimated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self performSelector:@selector(presentLeftMenuViewController:) withObject:nil afterDelay:0];
+    
+//    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

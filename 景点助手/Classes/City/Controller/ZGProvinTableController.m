@@ -16,10 +16,20 @@
 @property (strong, nonatomic) NSArray *dataArray;
 @property (strong, nonatomic) NSMutableArray *provinArray;
 
+@property (strong, nonatomic) UIButton *btn;
+
 @end
 
 @implementation ZGProvinTableController
 
+
+- (instancetype)initWithButton:(UIButton *)button {
+    self = [super init];
+    if (self) {
+        _btn = button;
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -100,7 +110,7 @@
         }
     }
     
-    ZGCityTableController *cityTableController = [[ZGCityTableController alloc]initWithCityArray:cityArray];
+    ZGCityTableController *cityTableController = [[ZGCityTableController alloc]initWithCityArray:cityArray button:_btn];
     [self.navigationController pushViewController:cityTableController animated:YES];
     
 //    NSUserDefaults *detault = [[NSUserDefaults alloc]init];

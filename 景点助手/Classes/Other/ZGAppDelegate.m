@@ -7,14 +7,13 @@
 //
 
 #import "ZGAppDelegate.h"
+#import "ZGHomeViewController.h"
 #import "ZGScenicTableController.h"
 #import "ZGNavigationController.h"
-#import "ZGHotelTableController.h"
-#import "ZGProvinTableController.h"
-#import "ZGWeatherTableController.h"
-#import "ZGPriceTableController.h"
-#import "ZGHotelTableController.h"
-#import "ZGCollectViewController.h"
+
+#import "RESideMenu.h"
+
+
 
 @implementation ZGAppDelegate
 
@@ -27,29 +26,25 @@
     //便捷方法，去使被使用对象的主窗口显示到屏幕的最前端
     [self.window makeKeyAndVisible];
     
-//    ZGScenicTableController *scenic = [[ZGScenicTableController alloc]init];
-//    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:scenic];
+    NSUserDefaults *user = [[NSUserDefaults alloc]init];
+    NSString *cityName = [user objectForKey:@"cityName"];
+    if (cityName.length == 0) {
+        [user setObject:@"317" forKey:@"cityId"];
+        [user setObject:@"24" forKey:@"provinId"];
+        [user setObject:@"西安" forKey:@"cityName"];
+    }
 
-//    ZGHotelTableController *hotel = [[ZGHotelTableController alloc]init];
-//    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:hotel];
     
-//    ZGProvinTableController *city = [[ZGProvinTableController alloc]init];
-//    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:city];
+    ZGScenicTableController *scenic = [[ZGScenicTableController alloc]init];
+    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:scenic];
+    ZGHomeViewController *home = [[ZGHomeViewController alloc]init];
+    RESideMenu *sideMenuViewController = [[RESideMenu alloc] initWithContentViewController:nv
+                                                                    leftMenuViewController:home
+                                                                   rightMenuViewController:nil];
     
-//    ZGWeatherTableController *weather = [[ZGWeatherTableController alloc]init];
-//    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:weather];
     
-//    ZGPriceTableController *price = [[ZGPriceTableController alloc]init];
-//    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:price];
+    [self.window setRootViewController:sideMenuViewController];
     
-//    ZGHotelTableController *hotel = [[ZGHotelTableController alloc]init];
-//    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:hotel];
-    
-    ZGCollectViewController *collect = [[ZGCollectViewController alloc]init];
-    ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:collect];
-    
-    [self.window setRootViewController:nv];
-
     return YES;
 }
 

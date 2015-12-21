@@ -13,9 +13,12 @@
 - (instancetype)initWithDic:(NSDictionary *)dic {
     self = [super init];
     if (self) {
-        self.cityId = dic[@"cityId"];
-        self.cityName = dic[@"cityName"];
-        self.provinId = dic[@"provinceId"];
+//        self.cityId = dic[@"cityId"];
+        [self setValue:dic[@"cityId"] forKey:@"cityId"];
+//        self.cityName = dic[@"cityName"];
+        [self setValue:dic[@"cityName"] forKey:@"cityName"];
+//        self.provinId = dic[@"provinceId"];
+        [self setValue:dic[@"provinceId"] forKey:@"provinId"];
     }
     return self;
 }

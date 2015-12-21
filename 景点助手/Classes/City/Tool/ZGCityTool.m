@@ -44,7 +44,17 @@
         
         //取出数据
         NSDictionary * data = [ZGDataTool dataWithWithPath:path params:params];
+        
         NSLog(@"%@", data);
+        
+        NSMutableArray *cityArray = [NSMutableArray array];
+        //处理数据
+        NSArray *array = data[@"result"];
+        for (NSDictionary *dic in array) {
+            ZGCityModel *city = [[ZGCityModel alloc]initWithDic:dic];
+            [cityArray addObject:city];
+        }
+        success(cityArray);
     }];
 }
 

@@ -44,6 +44,17 @@
 }
 
 
+-(void)setBed:(NSString *)bed {
+    if (_bed.length == 0) {
+        if (bed.length == 0) {
+            _bed = @"大床";
+        }else {
+            _bed = bed;
+        }
+    }
+    return;
+}
+
 - (NSString *)description {
     return [NSString stringWithFormat:@"isSpread:%d \t area:%@ \t bed:%@ \t roomName:%@ \t roomArray:%@", self.isSpread, self.area, self.bed, self.roomName, self.roomArray];
 }

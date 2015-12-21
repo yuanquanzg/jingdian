@@ -10,10 +10,14 @@
 #import "ZGPriceTool.h"
 #import "ZGPriceCell.h"
 #import "UIImageView+ZGTool.h"
+#import "MBProgressHUD.h"
+
 
 @interface ZGPriceTableController ()
 
 @property (strong, nonatomic) NSMutableArray *priceArray;
+
+@property (strong, nonatomic) MBProgressHUD *loadHud;
 
 @end
 
@@ -24,8 +28,8 @@ const static CGFloat   KheaderViewHeight = 200;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self initData];
     [self buildView];
+    [self initData];
 }
 
 - (void)initData {
@@ -53,6 +57,14 @@ const static CGFloat   KheaderViewHeight = 200;
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     
     self.title = @"票价";
+    
+    //初始化加载提示
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"努力加载中";
+    [hud setHidden:YES];
+    _loadHud = hud;
+    
 }
 
 

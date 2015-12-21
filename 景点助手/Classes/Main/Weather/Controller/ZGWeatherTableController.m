@@ -12,10 +12,13 @@
 #import "ZGFutureCell.h"
 #import "ZGTodayDetailCell.h"
 #import "ZGAdviceCell.h"
+#import "MBProgressHUD.h"
 
 @interface ZGWeatherTableController ()
 
 @property (strong, nonatomic) NSMutableArray *weatherArray;    //天气状况数组
+
+@property (strong, nonatomic) MBProgressHUD *loadHud;
 
 @end
 
@@ -23,9 +26,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
-    [self initData];
+
     [self buildView];
+    [self initData];
 }
 
 
@@ -58,6 +61,13 @@
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     
     self.title = @"天气";
+    
+    //初始化加载提示
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"努力加载中";
+    [hud setHidden:YES];
+    _loadHud = hud;
 }
 
 #pragma mark UITableViewDataSource

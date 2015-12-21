@@ -27,8 +27,17 @@
     
     //修改全局navigationBar返回按钮字体颜色
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    
+    self.view.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.view.layer.shadowOffset = CGSizeMake(-3.5, 0);
+    self.view.layer.shadowOpacity = 0.2;
+
 }
 
+- (void)doThing {
+    NSLog(@"zxcvbnm");
+}
 
 //设置状态栏的（亮色）白色
 -(UIStatusBarStyle)preferredStatusBarStyle

@@ -13,8 +13,8 @@
 #import <UIKit/UIKit.h>
 @class ZGHotelDetail;
 
-typedef NS_ENUM(NSInteger, ZGHotelDetailCellButtonTag) {
-    ZGHotelDetailCellButtonphone,          // phoneButton
+typedef NS_ENUM(NSInteger, ZGHotelDetailCellButtonType) {
+    ZGHotelDetailCellButtonphone = 0,          // phoneButton
     ZGHotelDetailCellButtonIntro,        // introButton
 };
 

@@ -9,9 +9,9 @@
  景点门票信息展示
  */
 
-#import "ZGTableViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface ZGPriceTableController : ZGTableViewController
+@interface ZGPriceTableController : UITableViewController
 
 @property (strong, nonatomic) NSString *imageStr;   //图片路径
 @property (strong, nonatomic) NSString *scenicId;   //景点ID

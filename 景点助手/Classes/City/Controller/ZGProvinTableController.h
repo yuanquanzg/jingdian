@@ -10,4 +10,7 @@
 
 @interface ZGProvinTableController : ZGTableViewController
 
+
+- (instancetype)initWithButton:(UIButton *)button;
+
 @end
