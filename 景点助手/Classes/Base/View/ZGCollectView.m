@@ -55,7 +55,7 @@
 //    [self addSubview:_shareButton];
     
     _collectionButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _collectionButton.backgroundColor = [UIColor whiteColor];
+    _collectionButton.backgroundColor = [UIColor clearColor];
     [_collectionButton setFrame: self.frame];
 //    [_collectionButton setTitleColor:[UIColor colorWithPatternImage:bgImage] forState:UIControlStateNormal];
 //    [_collectionButton setTitle:@"收藏" forState:UIControlStateNormal];

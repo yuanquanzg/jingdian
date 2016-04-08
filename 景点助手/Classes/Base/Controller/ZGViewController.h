@@ -13,4 +13,6 @@
 
 @property (strong, nonatomic) MBProgressHUD *loadHud;   //加载提示
 
+- (void)addSubview:(UIView *)subview;
+
 @end

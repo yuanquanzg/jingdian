@@ -67,7 +67,7 @@ const static CGFloat  otherCellHeight = 100;    //其他Cell的高度
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:_tableView];
+    [self addSubview:_tableView];
     
     //不显示竖向滑动条
     self.tableView.showsVerticalScrollIndicator = NO;

@@ -7,6 +7,7 @@
 //
 
 #import "ZGViewController.h"
+#import "ZGErrorView.h"
 
 
 //#define NetworkErrorNotification @"NetworkError"
@@ -41,20 +42,35 @@
 #pragma mark 对网络请求出错的处理
 - (void)showNetworkError {
     
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-
-//        [_loadHud setHidden:YES];
-
-#warning 此处应做处理，加上一个View提示下拉刷新之类的
-    }];
+    [self.loadHud setHidden:YES];
     
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"加载失败,请检查网络" message:nil preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:action];
+    ZGErrorView *errorView = [[ZGErrorView alloc]initWithFrame:self.view.frame];
+    [errorView showErrorViewWithType:ZGErrorViewNetworkError];
+    [self.view addSubview:errorView];
     
-    [self presentViewController:alert animated:YES completion:nil];
+//    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//
+////        [_loadHud setHidden:YES];
+//
+//#warning 此处应做处理，加上一个View提示下拉刷新之类的
+//    }];
+//    
+//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"加载失败,请检查网络" message:nil preferredStyle:UIAlertControllerStyleAlert];
+//    [alert addAction:action];
+//    
+//    [self presentViewController:alert animated:YES completion:nil];
+    
     
 
 }
 
+
+- (void)addSubview:(UIView *)subview {
+    
+    if ([self.view.subviews containsObject:_loadHud]) {
+        [self.view insertSubview:subview belowSubview:_loadHud];
+    }
+    
+}
 
 @end

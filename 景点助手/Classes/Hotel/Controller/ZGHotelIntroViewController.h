@@ -9,9 +9,9 @@
  酒店详细介绍的Controller
  */
 
-#import <UIKit/UIKit.h>
+#import "ZGViewController.h"
 
-@interface ZGHotelIntroViewController : UIViewController
+@interface ZGHotelIntroViewController : ZGViewController
 
 @property (strong, nonatomic) NSString *intro;
 

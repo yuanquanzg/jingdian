@@ -6,11 +6,13 @@
 //  Copyright © 2015年 赵志刚. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "MBProgressHUD.h"
+//#import <UIKit/UIKit.h>
+//#import "MBProgressHUD.h"
+#import "ZGViewController.h"
 
-@interface ZGTableViewController : UITableViewController
+@interface ZGTableViewController : ZGViewController
 
-@property (strong, nonatomic) MBProgressHUD *loadHud;
+//@property (strong, nonatomic) MBProgressHUD *loadHud;
+@property (nonatomic, strong) UITableView *tableView;
 
 @end

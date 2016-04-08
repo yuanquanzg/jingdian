@@ -46,7 +46,7 @@
         _introTextView.frame = CGRectMake(3, 0, self.view.frame.size.width - 6, contentFrame.size.height);
     }
     
-    [self.view addSubview:_introTextView];
+    [self addSubview:_introTextView];
 
 }
 

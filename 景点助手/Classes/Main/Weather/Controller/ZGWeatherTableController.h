@@ -10,6 +10,6 @@
 */
 #import <UIKit/UIKit.h>
 
-@interface ZGWeatherTableController : UITableViewController
+@interface ZGWeatherTableController :UITableViewController
 
 @end

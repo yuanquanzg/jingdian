@@ -85,7 +85,7 @@ const static CGFloat  bottomViewHeight = 50;    //底部收藏和分享的按钮
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:_tableView];
+    [self addSubview:_tableView];
     
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
 
