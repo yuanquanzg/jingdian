@@ -63,6 +63,8 @@
 		22BB8D811C19D455008F59CE /* ZGCityTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB8D801C19D455008F59CE /* ZGCityTableController.m */; };
 		22BB8D841C19D5FA008F59CE /* ZGCityTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB8D831C19D5FA008F59CE /* ZGCityTool.m */; };
 		22BB8D8D1C19D850008F59CE /* ZGTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB8D8C1C19D850008F59CE /* ZGTableViewController.m */; };
+		22CACCBC1CB6124E00F36A8D /* ZGCollectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CACCBB1CB6124E00F36A8D /* ZGCollectView.m */; };
+		22CACCBF1CB656F100F36A8D /* ZGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CACCBE1CB656F100F36A8D /* ZGViewController.m */; };
 		22CE33E11C1AF4EC003760BA /* ZGProvinTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CE33E01C1AF4EC003760BA /* ZGProvinTableController.m */; };
 /* End PBXBuildFile section */
 
@@ -177,6 +179,10 @@
 		22BB8D831C19D5FA008F59CE /* ZGCityTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGCityTool.m; sourceTree = "<group>"; };
 		22BB8D8B1C19D850008F59CE /* ZGTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGTableViewController.h; sourceTree = "<group>"; };
 		22BB8D8C1C19D850008F59CE /* ZGTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGTableViewController.m; sourceTree = "<group>"; };
+		22CACCBA1CB6124E00F36A8D /* ZGCollectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGCollectView.h; sourceTree = "<group>"; };
+		22CACCBB1CB6124E00F36A8D /* ZGCollectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGCollectView.m; sourceTree = "<group>"; };
+		22CACCBD1CB656F100F36A8D /* ZGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGViewController.h; sourceTree = "<group>"; };
+		22CACCBE1CB656F100F36A8D /* ZGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGViewController.m; sourceTree = "<group>"; };
 		22CE33DF1C1AF4EC003760BA /* ZGProvinTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGProvinTableController.h; sourceTree = "<group>"; };
 		22CE33E01C1AF4EC003760BA /* ZGProvinTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGProvinTableController.m; sourceTree = "<group>"; };
 		3E473DFA3AD8154573EF4717 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +219,8 @@
 				224259DE1C140CED00D868BF /* ZGNavigationController.m */,
 				22BB8D8B1C19D850008F59CE /* ZGTableViewController.h */,
 				22BB8D8C1C19D850008F59CE /* ZGTableViewController.m */,
+				22CACCBD1CB656F100F36A8D /* ZGViewController.h */,
+				22CACCBE1CB656F100F36A8D /* ZGViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -246,6 +254,8 @@
 				22807D6F1C21A34E000A4829 /* ZGButton.m */,
 				22807D651C2196CE000A4829 /* ZGCellectShareView.h */,
 				22807D661C2196CE000A4829 /* ZGCellectShareView.m */,
+				22CACCBA1CB6124E00F36A8D /* ZGCollectView.h */,
+				22CACCBB1CB6124E00F36A8D /* ZGCollectView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -854,7 +864,7 @@
 				TargetAttributes = {
 					2276FA451BFC29DE00C6FC07 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = UHCLK74DHB;
+						DevelopmentTeam = 757FJ2Y877;
 					};
 				};
 			};
@@ -951,6 +961,7 @@
 				22806C771C1804B2002F4F4F /* ZGDetailCell.m in Sources */,
 				22806C741C180228002F4F4F /* ZGScenicDetailController.m in Sources */,
 				22807D641C218E4D000A4829 /* ZGCollectViewController.m in Sources */,
+				22CACCBC1CB6124E00F36A8D /* ZGCollectView.m in Sources */,
 				22843B9E1C207AD7002F1251 /* ZGHotelHeaderView.m in Sources */,
 				22843B8F1C1FAE79002F1251 /* ZGHotelDetailCell.m in Sources */,
 				22653A031C1EEEF300C0BA5C /* ZGHotelTool.m in Sources */,
@@ -993,6 +1004,7 @@
 				226539FD1C1E859900C0BA5C /* ZGPriceModel.m in Sources */,
 				22806C621C17FB10002F4F4F /* ZGScenicDetail.m in Sources */,
 				22806C651C17FB10002F4F4F /* ZGScenicCell.m in Sources */,
+				22CACCBF1CB656F100F36A8D /* ZGViewController.m in Sources */,
 				22653A091C1EEF9E00C0BA5C /* ZGHotelDetail.m in Sources */,
 				22643CAE1C1DD43C00C741AD /* ZGTodayDetailCell.m in Sources */,
 			);
@@ -1102,10 +1114,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "景点助手/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zzg.----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzg.jingdianzhushou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1117,10 +1131,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "景点助手/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zzg.----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzg.jingdianzhushou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

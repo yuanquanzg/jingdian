@@ -32,6 +32,7 @@
     [aCoder encodeObject:self.imageUrl forKey:@"imageUrl"];
     [aCoder encodeObject:self.thingName forKey:@"thingName"];
 }
+
 //分别把属性变量根据关键字进行逆转码，最后返回一个类的对象
 - (id)initWithCoder:(NSCoder *)aDecoder{
     if (self = [super init]) {

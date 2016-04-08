@@ -37,9 +37,26 @@
     backButton.titleEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
     [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [backButton addTarget:self action:@selector(presentLeftMenuViewController:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc]initWithCustomView:backButton];
-    self.navigationItem.leftBarButtonItem = rightButton;
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc]initWithCustomView:backButton];
+    self.navigationItem.leftBarButtonItem = leftButton;
 
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showNetworkError) name:@"NetworkError" object:nil];
+
+}
+
+#pragma mark 对网络请求出错的处理
+- (void)showNetworkError {
+    
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+#warning 此处应做处理，加上一个View提示下拉刷新之类的
+    }];
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"加载失败,请检查网络" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:action];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

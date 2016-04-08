@@ -6,9 +6,10 @@
 //  Copyright © 2015年 赵志刚. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+//#import <UIKit/UIKit.h>
+#import "ZGViewController.h"
 
-@interface ZGScenicDetailController : UIViewController
+@interface ZGScenicDetailController : ZGViewController
 
 @property (strong, nonatomic) NSString  *scenicId;
 

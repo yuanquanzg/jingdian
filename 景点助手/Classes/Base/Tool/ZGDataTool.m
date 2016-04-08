@@ -51,6 +51,8 @@
     //取出第一个文件夹的路径，即Documents
     NSString *documentPath =[documentPaths objectAtIndex:0];
     
+    NSLog(@"%@", documentPath);
+    
     //fileName就是保存文件的文件名，filePath是文件的具体路径
     NSString *filePath=[documentPath stringByAppendingPathComponent:fileName];
     

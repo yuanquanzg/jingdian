@@ -9,9 +9,10 @@
  酒店详情与房间信息的展示
  */
 
-#import "ZGTableViewController.h"
+#import "ZGViewController.h"
+//#import "ZGTableViewController.h"
 
-@interface ZGHotelDetailController : UIViewController
+@interface ZGHotelDetailController : ZGViewController
 
 @property (strong, nonatomic) NSString *hotelId;
 

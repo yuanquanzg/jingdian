@@ -15,7 +15,8 @@
 #import "ZGHotelHeaderView.h"
 #import "ZGRoomListCell.h"
 #import "ZGCollectionModel.h"
-#import "ZGCellectShareView.h"
+//#import "ZGCellectShareView.h"
+#import "ZGCollectView.h"
 #import "ZGHotelIntroViewController.h"
 
 @interface ZGHotelDetailController ()<ZGHotelHeaderViewDelegate, ZGHotelDetailCellDelegate, UITableViewDataSource, UITableViewDelegate>
@@ -23,11 +24,10 @@
 @property (strong, nonatomic) ZGHotelDetail *hotelDeatil;  //酒店信息
 @property (strong, nonatomic) NSMutableArray *roomArray;    //酒店房间信息
 
-@property (strong, nonatomic) MBProgressHUD *loadHud;   //加载提示
 
 @property (strong, nonatomic) UITableView *tableView;
 
-@property (strong, nonatomic) ZGCellectShareView *bottomView; //底部分享与收藏按钮
+//@property (strong, nonatomic) ZGCellectShareView *bottomView; //底部分享与收藏按钮
 
 
 @end
@@ -46,7 +46,7 @@ const static CGFloat  bottomViewHeight = 50;    //底部收藏和分享的按钮
 }
 
 - (void)initData {
-
+    
     _hotelDeatil = [[ZGHotelDetail alloc]init];
 
     [self.loadHud setHidden:NO];
@@ -98,32 +98,47 @@ const static CGFloat  bottomViewHeight = 50;    //底部收藏和分享的按钮
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     
     
-    //初始化加载提示
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode = MBProgressHUDModeIndeterminate;
-    hud.labelText = @"努力加载中";
-    _loadHud = hud;
-    
-    ZGCollectionModel *collectModel = [[ZGCollectionModel alloc]initWithId:self.hotelId imageUrl:self.imageUrl name:self.hotelName];
-    _bottomView = [[ZGCellectShareView alloc]initWithCollectionModel:collectModel fileName:@"cllectionHotel"];
-    _bottomView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:_bottomView];
+//    ZGCollectionModel *collectModel = [[ZGCollectionModel alloc]initWithId:self.hotelId imageUrl:self.imageUrl name:self.hotelName];
+//    _bottomView = [[ZGCellectShareView alloc]initWithCollectionModel:collectModel fileName:@"cllectionHotel"];
+//    _bottomView.translatesAutoresizingMaskIntoConstraints = NO;
+//    [self.view addSubview:_bottomView];
+//    
+//    //添加横向约束
+//    NSDictionary *viewsDic = NSDictionaryOfVariableBindings(_tableView, _bottomView);
+//    NSString *hVFL1 = @"H:|-0-[_tableView]-0-|";
+//    NSArray *hCons1= [NSLayoutConstraint constraintsWithVisualFormat:hVFL1 options:0 metrics:nil views:viewsDic];
+//    [self.view addConstraints:hCons1];
+//    
+//    NSString *hVFL2 = @"H:|-0-[_bottomView]-0-|";
+//    NSArray *hCons2= [NSLayoutConstraint constraintsWithVisualFormat:hVFL2 options:0 metrics:nil views:viewsDic];
+//    [self.view addConstraints:hCons2];
+//    
+//    //添加纵向约束
+//    //    NSDictionary *metrics = NSDictionaryOfVariableBindings([NSNumber numberWithFloat:headerViewHeight]);
+//    NSString *vVFL = @"V:|-0-[_tableView]-0-[_bottomView(headerViewHeight)]-0-|";
+//    NSArray *vCons = [NSLayoutConstraint constraintsWithVisualFormat:vVFL options:0 metrics:@{@"headerViewHeight":[NSNumber numberWithFloat:bottomViewHeight]} views:viewsDic];
+//    [self.view addConstraints:vCons];
     
     //添加横向约束
-    NSDictionary *viewsDic = NSDictionaryOfVariableBindings(_tableView, _bottomView);
+    NSDictionary *viewsDic = NSDictionaryOfVariableBindings(_tableView);
     NSString *hVFL1 = @"H:|-0-[_tableView]-0-|";
     NSArray *hCons1= [NSLayoutConstraint constraintsWithVisualFormat:hVFL1 options:0 metrics:nil views:viewsDic];
     [self.view addConstraints:hCons1];
     
-    NSString *hVFL2 = @"H:|-0-[_bottomView]-0-|";
-    NSArray *hCons2= [NSLayoutConstraint constraintsWithVisualFormat:hVFL2 options:0 metrics:nil views:viewsDic];
-    [self.view addConstraints:hCons2];
     
     //添加纵向约束
     //    NSDictionary *metrics = NSDictionaryOfVariableBindings([NSNumber numberWithFloat:headerViewHeight]);
-    NSString *vVFL = @"V:|-0-[_tableView]-0-[_bottomView(headerViewHeight)]-0-|";
+    NSString *vVFL = @"V:|-0-[_tableView]-0-|";
     NSArray *vCons = [NSLayoutConstraint constraintsWithVisualFormat:vVFL options:0 metrics:@{@"headerViewHeight":[NSNumber numberWithFloat:bottomViewHeight]} views:viewsDic];
     [self.view addConstraints:vCons];
+    
+    
+    ZGCollectionModel *collectModel = [[ZGCollectionModel alloc]initWithId:self.hotelId imageUrl:self.imageUrl name:self.hotelName];
+    ZGCollectView *collectView = [[ZGCollectView alloc]initWithCollectionModel:collectModel fileName:@"cllectionHotel"];
+    collectView.frame = CGRectMake(0, 0, 30, 30 );
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc]initWithCustomView:collectView];
+    self.navigationItem.rightBarButtonItem = rightButton;
+
 
 }
 

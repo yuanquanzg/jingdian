@@ -46,7 +46,8 @@
         if (error == nil) {
             return;
         }
-        failure(error);
+//        failure(error);
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"NetworkError" object:nil];
     }];
     
 }
