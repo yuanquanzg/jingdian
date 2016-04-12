@@ -4,3 +4,4 @@ pod 'SDWebImage', '~>3.7'
 pod 'MBProgressHUD', '~> 0.9.1'
 pod 'RESideMenu', '~> 4.0.7'
 pod 'MJRefresh'
+pod 'BaiduMapKit' #百度地图SDK

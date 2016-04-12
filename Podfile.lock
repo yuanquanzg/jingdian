@@ -20,6 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - BaiduMapKit (2.9.1)
   - MBProgressHUD (0.9.1)
   - MJRefresh (3.0.7)
   - RESideMenu (4.0.7)
@@ -29,6 +30,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - BaiduMapKit
   - MBProgressHUD (~> 0.9.1)
   - MJRefresh
   - RESideMenu (~> 4.0.7)
@@ -36,6 +38,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  BaiduMapKit: 97d2d44b41a876de2371fb91ddf78cdf84dafa05
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MJRefresh: f3e1228ec3d38c7ba5208d58032631a52f39f495
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
