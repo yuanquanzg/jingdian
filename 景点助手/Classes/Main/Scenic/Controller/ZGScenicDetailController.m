@@ -16,6 +16,7 @@
 #import "ZGCollectionModel.h"
 
 #import "ZGWeatherTableController.h"
+#import "ZGTrafficViewController.h"
 #import "ZGPriceTableController.h"
 
 @interface ZGScenicDetailController ()<ZGHeaderViewDelegate, UITableViewDataSource, UITableViewDelegate>
@@ -196,6 +197,10 @@ const static CGFloat  otherCellHeight = 100;    //其他Cell的高度
     }else if (btn.tag == ZGScenicDetailHeaderViewButtonWeather) {
         ZGWeatherTableController *weather = [[ZGWeatherTableController alloc] init];
         [self.navigationController pushViewController:weather animated:YES];
+    }else if (btn.tag == ZGScenicDetailHeaderViewButtonTraffic) {
+        ZGTrafficViewController *traffic = [[ZGTrafficViewController alloc]init];
+        traffic.scenicName = _scenicName;
+        [self.navigationController pushViewController:traffic animated:YES];
     }
 }
 

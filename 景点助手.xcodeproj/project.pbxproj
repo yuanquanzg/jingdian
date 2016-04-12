@@ -66,6 +66,8 @@
 		22CACCBC1CB6124E00F36A8D /* ZGCollectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CACCBB1CB6124E00F36A8D /* ZGCollectView.m */; };
 		22CACCBF1CB656F100F36A8D /* ZGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CACCBE1CB656F100F36A8D /* ZGViewController.m */; };
 		22CACCC51CB7548500F36A8D /* ZGErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CACCC41CB7548500F36A8D /* ZGErrorView.m */; };
+		22CACCC81CBC917000F36A8D /* ZGTrafficViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CACCC71CBC917000F36A8D /* ZGTrafficViewController.m */; };
+		22CACCCE1CBCA1F200F36A8D /* ZGTrafficOptionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CACCCD1CBCA1F200F36A8D /* ZGTrafficOptionButton.m */; };
 		22CE33E11C1AF4EC003760BA /* ZGProvinTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CE33E01C1AF4EC003760BA /* ZGProvinTableController.m */; };
 /* End PBXBuildFile section */
 
@@ -186,6 +188,10 @@
 		22CACCBE1CB656F100F36A8D /* ZGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGViewController.m; sourceTree = "<group>"; };
 		22CACCC31CB7548500F36A8D /* ZGErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGErrorView.h; sourceTree = "<group>"; };
 		22CACCC41CB7548500F36A8D /* ZGErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGErrorView.m; sourceTree = "<group>"; };
+		22CACCC61CBC917000F36A8D /* ZGTrafficViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGTrafficViewController.h; sourceTree = "<group>"; };
+		22CACCC71CBC917000F36A8D /* ZGTrafficViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGTrafficViewController.m; sourceTree = "<group>"; };
+		22CACCCC1CBCA1F200F36A8D /* ZGTrafficOptionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGTrafficOptionButton.h; sourceTree = "<group>"; };
+		22CACCCD1CBCA1F200F36A8D /* ZGTrafficOptionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGTrafficOptionButton.m; sourceTree = "<group>"; };
 		22CE33DF1C1AF4EC003760BA /* ZGProvinTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGProvinTableController.h; sourceTree = "<group>"; };
 		22CE33E01C1AF4EC003760BA /* ZGProvinTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGProvinTableController.m; sourceTree = "<group>"; };
 		3E473DFA3AD8154573EF4717 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -706,6 +712,8 @@
 		22806C6A1C17FB74002F4F4F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				22CACCC61CBC917000F36A8D /* ZGTrafficViewController.h */,
+				22CACCC71CBC917000F36A8D /* ZGTrafficViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -727,6 +735,8 @@
 		22806C6D1C17FB74002F4F4F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				22CACCCC1CBCA1F200F36A8D /* ZGTrafficOptionButton.h */,
+				22CACCCD1CBCA1F200F36A8D /* ZGTrafficOptionButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -982,6 +992,7 @@
 				22806C801C181740002F4F4F /* UIImageView+ZGTool.m in Sources */,
 				228E44311C22805C00880FD8 /* ZGHomeViewController.m in Sources */,
 				226539FA1C1E858A00C0BA5C /* ZGPriceTool.m in Sources */,
+				22CACCC81CBC917000F36A8D /* ZGTrafficViewController.m in Sources */,
 				22806C641C17FB10002F4F4F /* ZGScenicTool.m in Sources */,
 				226834C21C1ACA83006D02C5 /* ZGCityModel.m in Sources */,
 				22806C7D1C180507002F4F4F /* ZGHeaderView.m in Sources */,
@@ -1001,6 +1012,7 @@
 				22806C7A1C1804F1002F4F4F /* ZGPageView.m in Sources */,
 				2286D9041C1C0A7E003BC385 /* ZGWeatherTool.m in Sources */,
 				227E14391BFC2CD9001E6FBB /* main.m in Sources */,
+				22CACCCE1CBCA1F200F36A8D /* ZGTrafficOptionButton.m in Sources */,
 				22643CAB1C1DC15100C741AD /* ZGFutureCell.m in Sources */,
 				227E14441BFC2F4A001E6FBB /* ZGAppDelegate.m in Sources */,
 				2286D90A1C1C0F5F003BC385 /* ZGWeatherTableController.m in Sources */,

@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaiduMapAPI_Map/BMKMapComponent.h>
 
 @interface ZGAppDelegate  : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) BMKMapManager *mapManager;
+
 
 @end
