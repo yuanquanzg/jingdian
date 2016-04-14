@@ -30,6 +30,10 @@
         if (![JSON[@"error_code"] isEqualToNumber:@0]) {
             NSLog(@"没有数据了");
             success(scenicArray);
+            //取出存入文件的信息
+            NSDictionary * dict = [ZGDataTool dataWithWithPath:path params:params];
+            NSLog(@"%@", dict);
+
             return;
         }
 
@@ -83,6 +87,8 @@
         if (![JSON[@"error_code"] isEqualToNumber:@0]) {
             NSLog(@"没有数据了");
             NSLog(@"%@", JSON);
+//            NSDictionary * data = [ZGDataTool dataWithWithPath:path params:params];
+//            NSLog(@"%@", data);
             success(detailArray);
             return;
         }

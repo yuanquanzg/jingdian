@@ -31,15 +31,15 @@
 - (void)buildView {
     _refreshButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [_refreshButton setBackgroundImage:[UIImage imageNamed:@"error_button_refresh"] forState:UIControlStateNormal];
-    [_refreshButton setCenter:CGPointMake(self.center.x, self.center.y - 100)];
+    [_refreshButton setCenter:CGPointMake(self.center.x, self.center.y - 200)];
     [_refreshButton setBounds:CGRectMake(0, 0, 128, 128)];
     [_refreshButton addTarget:self action:@selector(refreshData) forControlEvents:UIControlEventTouchUpInside];
     
     _networkView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"error_image_network"]];
-    [_networkView setCenter:CGPointMake(self.center.x, self.center.y - 100)];
+    [_networkView setCenter:CGPointMake(self.center.x, self.center.y - 200)];
     [_networkView setBounds:CGRectMake(0, 0, 128, 128)];
     
-    _tipLable = [[UILabel alloc]initWithFrame:CGRectMake(0, _networkView.frame.origin.y + 128, CGRectGetWidth(self.bounds), 30)];
+    _tipLable = [[UILabel alloc]initWithFrame:CGRectMake(0, _networkView.frame.origin.y + 128 + 50, CGRectGetWidth(self.bounds), 30)];
     [_tipLable setTextColor:[UIColor grayColor]];
     [_tipLable setTextAlignment:NSTextAlignmentCenter];
     
