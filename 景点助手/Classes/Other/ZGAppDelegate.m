@@ -42,6 +42,9 @@
         [user setObject:@"24" forKey:@"provinId"];
         [user setObject:@"西安" forKey:@"cityName"];
     }
+    
+    [user setObject:@"YES" forKey:@"imageLoad"];
+    [user setObject:@"YES" forKey:@"dataLoad"];
 
     
     ZGScenicTableController *scenic = [[ZGScenicTableController alloc]init];

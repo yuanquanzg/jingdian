@@ -8,14 +8,33 @@
 
 #import "UIImageView+ZGTool.h"
 #import "UIImageView+WebCache.h"
+#import "Reachability.h"
 
 
 @implementation UIImageView (ZGTool)
 
 - (void)loadImageWithUrl:(NSString *)url {
+    NSUserDefaults *detault = [[NSUserDefaults alloc]init];
     
-    NSURL *imageUrl = [NSURL URLWithString:url];
-    [self sd_setImageWithURL:imageUrl placeholderImage:nil];
+    BOOL image =[[detault objectForKey:@"imageLoad"] isEqualToString:@"YES"];
+    
+    BOOL wifi = NO;
+    
+    Reachability *wifiR = [Reachability reachabilityForLocalWiFi];
+    if ([wifiR currentReachabilityStatus] != NotReachable) { // 有wifi
+        wifi = YES;
+    }
+    
+    if (image && wifi) {
+        NSURL *imageUrl = [NSURL URLWithString:url];
+        [self sd_setImageWithURL:imageUrl placeholderImage:nil];
+
+    }else {
+        
+#warning 设置占位视图
+    }
+
+    
 }
 
 @end

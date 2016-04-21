@@ -10,6 +10,9 @@
 
 @interface ZGSettingTableController ()
 
+@property (strong, nonatomic) UISwitch *imageSwitch;
+@property (strong, nonatomic) UISwitch *dataSwitch;
+
 @end
 
 @implementation ZGSettingTableController
@@ -27,77 +30,91 @@
 
 - (void)buildView {
     
+    _imageSwitch = [[UISwitch alloc]init];
+    [_imageSwitch addTarget:self action:@selector(imageSwitch:) forControlEvents:UIControlEventValueChanged];
+    [_imageSwitch setOn:YES];
+    
+    _dataSwitch = [[UISwitch alloc]init];
+    [_dataSwitch addTarget:self action:@selector(dataSwitch:) forControlEvents:UIControlEventValueChanged];
+    [_dataSwitch setOn:YES];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+  
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return 1;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    if (indexPath.section == 0) {
+        [cell.textLabel setText:@"非Wi-Fi加载数据"];
+        cell.accessoryView = _dataSwitch;
+    }else if (indexPath.section == 1) {
+        [cell.textLabel setText:@"非Wi-Fi加载图片"];
+        cell.accessoryView = _imageSwitch;
+    }else if (indexPath.section == 2) {
+        [cell.textLabel setText:@"团队介绍"];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }else if (indexPath.section == 3) {
+        [cell.textLabel setText:@"关于软件"];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+ 
+    CGFloat height = 0;
+    if (section == 0) {
+        height = 20;
+    }
+    return height;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    
+    CGFloat height = 20;
+//    if (section != 0) {
+//        height = 20;
+//    }
+    return height;
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
-/*
-#pragma mark - Navigation
-0
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+- (void)imageSwitch:(UISwitch *)imageSwitch {
+    
+    NSUserDefaults *detault = [[NSUserDefaults alloc]init];
+
+    if (imageSwitch.on) {
+        [detault setObject:@"YES" forKey:@"imageLoad"];
+    }else {
+        [detault setObject:@"NO" forKey:@"imageLoad"];
+    }
 }
-*/
+
+- (void)dataSwitch:(UISwitch *)dataSwitch {
+    
+    NSUserDefaults *detault = [[NSUserDefaults alloc]init];
+    
+    if (dataSwitch.on) {
+        [detault setObject:@"YES" forKey:@"dataLoad"];
+    }else {
+        [detault setObject:@"NO" forKey:@"dataLoad"];
+    }
+
+}
 
 @end

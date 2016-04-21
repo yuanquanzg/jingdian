@@ -10,6 +10,8 @@
 		1507F68ED264D34A0C3F0F6C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDCFFEE162EC0D3DCE94B3F /* libPods.a */; };
 		224259DF1C140CED00D868BF /* ZGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224259DE1C140CED00D868BF /* ZGNavigationController.m */; };
 		224259E51C14373100D868BF /* ZGHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 224259E41C14373100D868BF /* ZGHttpTool.m */; };
+		225CBAD41CC8864900A20495 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225CBAD31CC8864900A20495 /* SystemConfiguration.framework */; };
+		225CBAD71CC8884900A20495 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 225CBAD61CC8884900A20495 /* Reachability.m */; };
 		22643CA71C1DACB500C741AD /* ZGTodayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22643CA51C1DACB500C741AD /* ZGTodayCell.m */; };
 		22643CAB1C1DC15100C741AD /* ZGFutureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22643CAA1C1DC15100C741AD /* ZGFutureCell.m */; };
 		22643CAE1C1DD43C00C741AD /* ZGTodayDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22643CAD1C1DD43C00C741AD /* ZGTodayDetailCell.m */; };
@@ -77,6 +79,9 @@
 		224259DE1C140CED00D868BF /* ZGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGNavigationController.m; sourceTree = "<group>"; };
 		224259E31C14373100D868BF /* ZGHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGHttpTool.h; sourceTree = "<group>"; };
 		224259E41C14373100D868BF /* ZGHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGHttpTool.m; sourceTree = "<group>"; };
+		225CBAD31CC8864900A20495 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		225CBAD51CC8884100A20495 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		225CBAD61CC8884900A20495 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		22643CA41C1DACB400C741AD /* ZGTodayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGTodayCell.h; sourceTree = "<group>"; };
 		22643CA51C1DACB500C741AD /* ZGTodayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGTodayCell.m; sourceTree = "<group>"; };
 		22643CA91C1DC15100C741AD /* ZGFutureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGFutureCell.h; sourceTree = "<group>"; };
@@ -203,6 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225CBAD41CC8864900A20495 /* SystemConfiguration.framework in Frameworks */,
 				1507F68ED264D34A0C3F0F6C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +245,8 @@
 			children = (
 				22807D681C2197E7000A4829 /* ZGCollectionModel.h */,
 				22807D691C2197E7000A4829 /* ZGCollectionModel.m */,
+				225CBAD51CC8884100A20495 /* Reachability.h */,
+				225CBAD61CC8884900A20495 /* Reachability.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -840,6 +848,7 @@
 		F454A78224C24511C724341A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				225CBAD31CC8864900A20495 /* SystemConfiguration.framework */,
 				5EDCFFEE162EC0D3DCE94B3F /* libPods.a */,
 			);
 			name = Frameworks;
@@ -1000,6 +1009,7 @@
 				2286D9071C1C0B99003BC385 /* ZGWeatherModel.m in Sources */,
 				22A8CA5B1C21498A00D00EBC /* ZGHotelIntroTextView.m in Sources */,
 				22807D761C21A660000A4829 /* ZGCollectionCell.m in Sources */,
+				225CBAD71CC8884900A20495 /* Reachability.m in Sources */,
 				22BB8D841C19D5FA008F59CE /* ZGCityTool.m in Sources */,
 				22807D731C21A635000A4829 /* ZGCollectionTool.m in Sources */,
 				22B1E4A01C22DA5A0052471A /* ZGHomeMenuView.m in Sources */,
