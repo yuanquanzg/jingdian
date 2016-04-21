@@ -16,25 +16,40 @@
 - (void)loadImageWithUrl:(NSString *)url {
     NSUserDefaults *detault = [[NSUserDefaults alloc]init];
     
-    BOOL image =[[detault objectForKey:@"imageLoad"] isEqualToString:@"YES"];
+    BOOL image = [[detault objectForKey:@"imageLoad"] isEqualToString:@"YES"];
     
-    BOOL wifi = NO;
-    
-    Reachability *wifiR = [Reachability reachabilityForLocalWiFi];
-    if ([wifiR currentReachabilityStatus] != NotReachable) { // 有wifi
-        wifi = YES;
-    }
-    
-    if (image && wifi) {
-        NSURL *imageUrl = [NSURL URLWithString:url];
-        [self sd_setImageWithURL:imageUrl placeholderImage:nil];
+    // 1.检测wifi状态
+    Reachability *wifi = [Reachability reachabilityForLocalWiFi];
 
-    }else {
+    // 2.检测手机是否能上网络(WIFI\3G\2.5G)
+    Reachability *conn = [Reachability reachabilityForInternetConnection];
+
+    //状态为Wi-Fi
+    if (([wifi currentReachabilityStatus] != NotReachable) && ([conn currentReachabilityStatus] != NotReachable)) {
+        NSURL *imageUrl = [NSURL URLWithString:url];
+        [self sd_setImageWithURL:imageUrl placeholderImage:[[UIImage imageNamed:@"placeholderImage.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 1, 1, 1) resizingMode:UIImageResizingModeStretch]];
+    //状态为非Wi-Fi但是允许加载
+    }else if (image && (([wifi currentReachabilityStatus] == NotReachable) && ([conn currentReachabilityStatus] != NotReachable))) {
         
-#warning 设置占位视图
+        NSURL *imageUrl = [NSURL URLWithString:url];
+        [self sd_setImageWithURL:imageUrl placeholderImage:[[UIImage imageNamed:@"placeholderImage.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 1, 1, 1) resizingMode:UIImageResizingModeStretch]];
+    }else {
+        [self sd_setImageWithURL:nil placeholderImage:[[UIImage imageNamed:@"placeholderImage.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 1, 1, 1) resizingMode:UIImageResizingModeStretch]];
     }
 
     
 }
+
+// 用WIFI
+// [wifi currentReachabilityStatus] != NotReachable
+// [conn currentReachabilityStatus] != NotReachable
+
+// 没有用WIFI, 只用了手机网络
+// [wifi currentReachabilityStatus] == NotReachable
+// [conn currentReachabilityStatus] != NotReachable
+
+// 没有网络
+// [wifi currentReachabilityStatus] == NotReachable
+// [conn currentReachabilityStatus] == NotReachable
 
 @end

@@ -43,8 +43,11 @@
         [user setObject:@"西安" forKey:@"cityName"];
     }
     
-    [user setObject:@"YES" forKey:@"imageLoad"];
-    [user setObject:@"YES" forKey:@"dataLoad"];
+    NSString *load = [user objectForKey:@"imageLoad"];
+    if (load.length == 0) {
+        [user setObject:@"YES" forKey:@"imageLoad"];
+        [user setObject:@"YES" forKey:@"dataLoad"];
+    }
 
     
     ZGScenicTableController *scenic = [[ZGScenicTableController alloc]init];

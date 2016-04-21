@@ -7,6 +7,9 @@
 //
 
 #import "ZGSettingTableController.h"
+#import "ZGNavigationController.h"
+#import "ZGTeamViewController.h"
+#import "ZGAboutViewController.h"
 
 @interface ZGSettingTableController ()
 
@@ -32,11 +35,25 @@
     
     _imageSwitch = [[UISwitch alloc]init];
     [_imageSwitch addTarget:self action:@selector(imageSwitch:) forControlEvents:UIControlEventValueChanged];
-    [_imageSwitch setOn:YES];
+  
+//    [_imageSwitch setOn:YES];
     
     _dataSwitch = [[UISwitch alloc]init];
     [_dataSwitch addTarget:self action:@selector(dataSwitch:) forControlEvents:UIControlEventValueChanged];
     [_dataSwitch setOn:YES];
+    
+    NSUserDefaults *detault = [[NSUserDefaults alloc]init];
+    if ([[detault objectForKey:@"imageLoad"] isEqualToString:@"YES"]) {
+        [_imageSwitch setOn:YES];
+    }else {
+        [_imageSwitch setOn:NO];
+    }
+    
+    if ([[detault objectForKey:@"dataLoad"] isEqualToString:@"YES"]) {
+        [_dataSwitch setOn:YES];
+    }else {
+        [_dataSwitch setOn:NO];
+    }
     
 }
 
@@ -92,7 +109,23 @@
     return height;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 2) {
+        
+        ZGTeamViewController *team = [[ZGTeamViewController alloc]init];
+        ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:team];
+        [self presentViewController:nv animated:YES completion:nil];
+        
+    } else if (indexPath.section == 3) {
+        
+        ZGAboutViewController *about = [[ZGAboutViewController alloc]init];
+        ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:about];
+        [self presentViewController:nv animated:YES completion:nil];
+    }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 - (void)imageSwitch:(UISwitch *)imageSwitch {
     
