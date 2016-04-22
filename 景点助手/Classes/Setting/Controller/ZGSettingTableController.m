@@ -33,6 +33,8 @@
 
 - (void)buildView {
     
+    self.title = @"设置";
+    
     _imageSwitch = [[UISwitch alloc]init];
     [_imageSwitch addTarget:self action:@selector(imageSwitch:) forControlEvents:UIControlEventValueChanged];
   
@@ -80,7 +82,7 @@
         [cell.textLabel setText:@"非Wi-Fi加载图片"];
         cell.accessoryView = _imageSwitch;
     }else if (indexPath.section == 2) {
-        [cell.textLabel setText:@"团队介绍"];
+        [cell.textLabel setText:@"开发声明"];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }else if (indexPath.section == 3) {
         [cell.textLabel setText:@"关于软件"];

@@ -25,9 +25,27 @@
 
 - (void)buildView {
     
-    [self.view setBackgroundColor:[UIColor whiteColor]];
+    self.title = @"酒店简介";
+    
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"placeholderImage.png"]]];
+    
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    //    [backButton setTitle:@"注册" forState:UIControlStateNormal];
+    [backButton setImage:[UIImage imageNamed:@"setting_cancle"] forState:UIControlStateNormal];
+    backButton.frame = CGRectMake(0, 0, 25, 25 );
+    //解决自定义UIBarbuttonItem向右偏移的问题
+    backButton.titleEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
+    [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc]initWithCustomView:backButton];
+    self.navigationItem.leftBarButtonItem = leftButton;
+
     
     _introTextView = [[ZGHotelIntroTextView alloc]init];
+    
+    [_introTextView.layer setMasksToBounds:YES];
+    [_introTextView.layer setCornerRadius:10.0f];
+    
     _introTextView.text = _intro;
     //景点性情位置
     NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
@@ -36,18 +54,22 @@
     style.firstLineHeadIndent = 20.0f;//首行缩进
     style.tailIndent = 0.0f;//行尾缩进
     style.lineSpacing = 5.0f;//行间距
-    CGRect contentFrame = [self.intro boundingRectWithSize:CGSizeMake(self.view.frame.size.width - 6, MAXFLOAT) options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:17.0], NSParagraphStyleAttributeName:style} context:nil];
+    CGRect contentFrame = [self.intro boundingRectWithSize:CGSizeMake(self.view.frame.size.width - 10, MAXFLOAT) options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16.0], NSParagraphStyleAttributeName:style} context:nil];
     
     _introTextView.font = [UIFont systemFontOfSize:16.0];
     
-    if (contentFrame.size.height > self.view.frame.size.height) {
-        _introTextView.frame = CGRectMake(3, 0, self.view.frame.size.width - 6, self.view.frame.size.height);
+    if (contentFrame.size.height > self.view.frame.size.height - 64) {
+        _introTextView.frame = CGRectMake(5, 5, self.view.frame.size.width - 10, self.view.frame.size.height - 73);
     }else {
-        _introTextView.frame = CGRectMake(3, 0, self.view.frame.size.width - 6, contentFrame.size.height);
+        _introTextView.frame = CGRectMake(5, 5, self.view.frame.size.width - 10, contentFrame.size.height + 35);
     }
     
     [self addSubview:_introTextView];
 
+}
+
+- (void)back {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -18,8 +18,6 @@
 
 @property (strong, nonatomic) NSMutableArray *weatherArray;    //天气状况数组
 
-@property (strong, nonatomic) MBProgressHUD *loadHud;
-
 @end
 
 @implementation ZGWeatherTableController
@@ -63,13 +61,29 @@
     self.title = @"天气";
     
     //初始化加载提示
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode = MBProgressHUDModeIndeterminate;
-    hud.labelText = @"努力加载中";
-    [hud setHidden:YES];
-    _loadHud = hud;
+//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    hud.mode = MBProgressHUDModeIndeterminate;
+//    hud.labelText = @"努力加载中";
+//    [hud setHidden:YES];
+//    _loadHud = hud;
+
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    //    [backButton setTitle:@"注册" forState:UIControlStateNormal];
+    [backButton setImage:[UIImage imageNamed:@"setting_cancle"] forState:UIControlStateNormal];
+    backButton.frame = CGRectMake(0, 0, 25, 25 );
+    //解决自定义UIBarbuttonItem向右偏移的问题
+    backButton.titleEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
+    [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc]initWithCustomView:backButton];
+    self.navigationItem.leftBarButtonItem = leftButton;
 }
 
+- (void)back {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+    
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSInteger number;

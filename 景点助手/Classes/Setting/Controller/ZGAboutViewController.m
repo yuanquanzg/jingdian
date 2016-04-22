@@ -22,6 +22,8 @@
 
 - (void)buildView {
     
+    self.title = @"关于软件";
+    
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"placeholderImage.png"]]];
     
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];

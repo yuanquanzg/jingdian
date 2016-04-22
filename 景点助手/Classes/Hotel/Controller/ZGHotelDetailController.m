@@ -18,6 +18,7 @@
 //#import "ZGCellectShareView.h"
 #import "ZGCollectView.h"
 #import "ZGHotelIntroViewController.h"
+#import "ZGNavigationController.h"
 
 @interface ZGHotelDetailController ()<ZGHotelHeaderViewDelegate, ZGHotelDetailCellDelegate, UITableViewDataSource, UITableViewDelegate>
 
@@ -249,7 +250,8 @@ const static CGFloat  bottomViewHeight = 50;    //底部收藏和分享的按钮
       
         ZGHotelIntroViewController *introView = [[ZGHotelIntroViewController alloc]init];
         introView.intro = _hotelDeatil.intro;
-        [self.navigationController pushViewController:introView animated:YES];
+        ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:introView];
+        [self presentViewController:nv animated:YES completion:nil];
     }
 }
 

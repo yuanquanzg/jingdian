@@ -58,6 +58,18 @@
     return nil;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    _tableView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds));
+    
+}
+
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+}
+
 //#pragma mark 对网络请求出错的处理
 //- (void)showNetworkError {
 //    

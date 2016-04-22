@@ -15,6 +15,7 @@
 #import "ZGCollectView.h"
 #import "ZGCollectionModel.h"
 
+#import "ZGNavigationController.h"
 #import "ZGWeatherTableController.h"
 #import "ZGTrafficViewController.h"
 #import "ZGPriceTableController.h"
@@ -193,14 +194,21 @@ const static CGFloat  otherCellHeight = 100;    //其他Cell的高度
             price.imageStr = detail.imageUrl;
         }
         price.scenicId = self.scenicId;
-        [self.navigationController pushViewController:price animated:YES];
+        ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:price];
+        [self presentViewController:nv animated:YES completion:nil];
+        
     }else if (btn.tag == ZGScenicDetailHeaderViewButtonWeather) {
+        
         ZGWeatherTableController *weather = [[ZGWeatherTableController alloc] init];
-        [self.navigationController pushViewController:weather animated:YES];
+        ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:weather];
+        [self presentViewController:nv animated:YES completion:nil];
+        
     }else if (btn.tag == ZGScenicDetailHeaderViewButtonTraffic) {
+        
         ZGTrafficViewController *traffic = [[ZGTrafficViewController alloc]init];
         traffic.scenicName = _scenicName;
-        [self.navigationController pushViewController:traffic animated:YES];
+        ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:traffic];
+        [self presentViewController:nv animated:YES completion:nil];
     }
 }
 

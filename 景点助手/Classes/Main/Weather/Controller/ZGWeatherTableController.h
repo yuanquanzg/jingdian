@@ -8,8 +8,8 @@
 /*
 天气信息展示
 */
-#import <UIKit/UIKit.h>
+#import "ZGTableViewController.h"
 
-@interface ZGWeatherTableController :UITableViewController
+@interface ZGWeatherTableController :ZGTableViewController
 
 @end

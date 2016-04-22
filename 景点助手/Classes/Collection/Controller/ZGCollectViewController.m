@@ -163,8 +163,17 @@ const static CGFloat KCollectionHeaderViewHeight = 10.0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    CGFloat height = KCollectionHeaderViewHeight;
+    if (section != 0) {
+        height = 0;
+    }
+    return height;
+}
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+ 
     return KCollectionHeaderViewHeight;
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
