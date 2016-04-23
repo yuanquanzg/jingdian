@@ -229,8 +229,11 @@ const static CGFloat  bottomViewHeight = 50;    //底部收藏和分享的按钮
 #pragma mark ZGHotelDetailCellDelegate
 - (void)clickHotelDetailCellButton:(UIButton *)btn {
     if (btn.tag == ZGHotelDetailCellButtonphone) {
-        UIAlertAction *action1 = [UIAlertAction actionWithTitle:_hotelDeatil.phoneNumber style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UIAlertAction *action1 = [UIAlertAction actionWithTitle:_hotelDeatil.phoneNumber? _hotelDeatil.phoneNumber:@"382216672" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             NSLog(@"%@", _hotelDeatil.phoneNumber);
+            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", _hotelDeatil.phoneNumber? _hotelDeatil.phoneNumber:@"382216672"]];
+            
+            [[UIApplication sharedApplication] openURL:url];
         }];
         UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             NSLog(@"取消拨打：%@", _hotelDeatil.phoneNumber);

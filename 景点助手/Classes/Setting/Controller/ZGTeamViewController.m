@@ -12,6 +12,7 @@
 @interface ZGTeamViewController ()
 
 @property (strong, nonatomic) ZGHotelIntroTextView *introTextView;
+@property (strong, nonatomic) UIButton *feedbackBtn;
 
 @end
 
@@ -71,11 +72,26 @@
     }
     
     [self addSubview:_introTextView];
+    
+    _feedbackBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_feedbackBtn setCenter:CGPointMake(self.view.center.x, self.view.frame.size.height - 150)];
+    [_feedbackBtn setBounds:CGRectMake(0, 0, 40, 20)];
+    [_feedbackBtn setTitle:@"反馈" forState:UIControlStateNormal];
+    [_feedbackBtn.titleLabel setFont:[UIFont systemFontOfSize:15.0]];
+    [_feedbackBtn setTitleColor:[UIColor colorWithRed:0 green:128 / 256.0 blue:255 / 256.0 alpha:1] forState:UIControlStateNormal ];
+    [_feedbackBtn addTarget: self action:@selector(feedBack) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_feedbackBtn];
+    
 
 }
 
 - (void)back {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)feedBack {
+    
+    [[UIApplication sharedApplication]openURL:[NSURL   URLWithString:@"mailto://yuanquanzg@foxmail.com"]];
 }
 
 - (void)didReceiveMemoryWarning {
