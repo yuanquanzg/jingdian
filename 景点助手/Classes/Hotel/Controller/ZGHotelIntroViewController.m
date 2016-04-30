@@ -27,7 +27,10 @@
     
     self.title = @"酒店简介";
     
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"placeholderImage.png"]]];
+//    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"placeholderImage.png"]]];
+
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"hoteIntro_bg.jpeg"]]];
+
     
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     //    [backButton setTitle:@"注册" forState:UIControlStateNormal];
@@ -45,6 +48,10 @@
     
     [_introTextView.layer setMasksToBounds:YES];
     [_introTextView.layer setCornerRadius:10.0f];
+    [_introTextView.layer setBorderWidth:0.5f];
+    [_introTextView.layer setBorderColor:[[UIColor whiteColor] CGColor]];
+//    [_introTextView setTextColor:[UIColor whiteColor]];
+    [_introTextView setBackgroundColor:[UIColor clearColor]];
     
     _introTextView.text = _intro;
     //景点性情位置

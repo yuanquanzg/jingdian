@@ -50,7 +50,7 @@
     _trafficBtn = [ZGButton buttonWithType:UIButtonTypeRoundedRect];
     [_trafficBtn setBackgroundColor:[UIColor whiteColor]];
     [_trafficBtn setTag:ZGScenicDetailHeaderViewButtonTraffic];
-    [_trafficBtn setTitle:@"交通" forState:UIControlStateNormal];
+    [_trafficBtn setTitle:@"地图" forState:UIControlStateNormal];
     [_trafficBtn setTitleColor:[UIColor colorWithPatternImage:bgImage] forState:UIControlStateNormal];
     [_trafficBtn setImage:[[UIImage imageNamed:@"detail_traffic_deselect"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
     [_trafficBtn addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];

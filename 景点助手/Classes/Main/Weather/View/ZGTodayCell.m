@@ -47,25 +47,35 @@
     _tempLabel = [[UILabel alloc]init];
     _tempLabel.textAlignment = NSTextAlignmentCenter;
     _tempLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [_tempLabel setBackgroundColor:[UIColor clearColor]];
+    [_tempLabel setTextColor:[UIColor whiteColor]];
     [self addSubview:_tempLabel];
     
     _tempNowLabel = [[UILabel alloc]init];
+    [_tempNowLabel setBackgroundColor:[UIColor clearColor]];
+    [_tempNowLabel setTextColor:[UIColor whiteColor]];
     _tempNowLabel.textAlignment = NSTextAlignmentCenter;
     [_tempNowLabel setFont:[UIFont systemFontOfSize:60]];
     _tempNowLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_tempNowLabel];
     
     _weatherLabel = [[UILabel alloc]init];
+    [_weatherLabel setBackgroundColor:[UIColor clearColor]];
+    [_weatherLabel setTextColor:[UIColor whiteColor]];
     _weatherLabel.textAlignment = NSTextAlignmentCenter;
     _weatherLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_weatherLabel];
     
     _weekLabel = [[UILabel alloc]init];
+    [_weekLabel setBackgroundColor:[UIColor clearColor]];
+    [_weekLabel setTextColor:[UIColor whiteColor]];
     _weekLabel.textAlignment = NSTextAlignmentCenter;
     _weekLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_weekLabel];
     
     _dateLabel = [[UILabel alloc]init];
+    [_dateLabel setBackgroundColor:[UIColor clearColor]];
+    [_dateLabel setTextColor:[UIColor whiteColor]];
     _dateLabel.textAlignment = NSTextAlignmentCenter;
     _dateLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_dateLabel];

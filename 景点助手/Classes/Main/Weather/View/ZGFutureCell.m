@@ -40,16 +40,19 @@
 
 - (void)buildView {
     _tempLabel = [[UILabel alloc]init];
+    [_tempLabel setTextColor:[UIColor whiteColor]];
     _tempLabel.textAlignment = NSTextAlignmentCenter;
     _tempLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_tempLabel];
     
     _weekLabel = [[UILabel alloc]init];
+    [_weekLabel setTextColor:[UIColor whiteColor]];
     _weekLabel.textAlignment = NSTextAlignmentCenter;
     _weekLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_weekLabel];
     
     _weatherLabel = [[UILabel alloc]init];
+    [_weatherLabel setTextColor:[UIColor whiteColor]];
     _weatherLabel.textAlignment = NSTextAlignmentCenter;
     _weatherLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_weatherLabel];

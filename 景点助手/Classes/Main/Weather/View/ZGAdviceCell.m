@@ -40,6 +40,7 @@
 - (void)buildView {
     
     _adviceLabel = [[ZGDetailLabel alloc]init];
+    [_adviceLabel setTextColor:[UIColor whiteColor]];
     _adviceLabel.numberOfLines = 0;
     _adviceLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_adviceLabel];

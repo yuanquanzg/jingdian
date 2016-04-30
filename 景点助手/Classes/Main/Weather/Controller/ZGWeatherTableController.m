@@ -8,6 +8,7 @@
 
 #import "ZGWeatherTableController.h"
 #import "ZGWeatherTool.h"
+#import "ZGWeatherModel.h"
 #import "ZGTodayCell.h"
 #import "ZGFutureCell.h"
 #import "ZGTodayDetailCell.h"
@@ -44,6 +45,7 @@
         
         _weatherArray = weatherArray;
         [self.tableView reloadData];
+        [self buildView];
         [self.loadHud setHidden:YES];
     } failure:^(NSError *error) {
         
@@ -66,7 +68,20 @@
 //    hud.labelText = @"努力加载中";
 //    [hud setHidden:YES];
 //    _loadHud = hud;
-
+    
+    ZGWeatherModel *weat = _weatherArray ? _weatherArray[0] : nil;
+    
+    if ([weat.weather containsString:@"云"]) {
+        [self.tableView setBackgroundView:[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"weather_cloud1.jpeg"]]];
+    } else if ([weat.weather containsString:@"晴"]) {
+        [self.tableView setBackgroundView:[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"weather_sun.jpg"]]];
+    } else  if ([weat.weather containsString:@"雨"]) {
+        [self.tableView setBackgroundView:[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"weather_rain.jpeg"]]];
+    } else {
+        
+    }
+ 
+    
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     //    [backButton setTitle:@"注册" forState:UIControlStateNormal];
     [backButton setImage:[UIImage imageNamed:@"setting_cancle"] forState:UIControlStateNormal];
@@ -97,7 +112,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell;
-    
+//    cell.backgroundColor = [UIColor clearColor];
+    [cell.contentView setBackgroundColor:[UIColor clearColor]];
     if (indexPath.row == 0) {
         cell = [[ZGTodayCell alloc]initWithWeather:_weatherArray[indexPath.row]];
     }else if (indexPath.row == 5 ) {
@@ -107,6 +123,7 @@
     }else {
         cell = [[ZGFutureCell alloc]initWithWeather:_weatherArray[indexPath.row]];
     }
+    cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
 

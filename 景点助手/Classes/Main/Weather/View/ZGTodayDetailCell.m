@@ -54,67 +54,79 @@
 - (void)buildView {
     
     _windNameLabel = [[UILabel alloc]init];
+    [_windNameLabel setTextColor:[UIColor whiteColor]];
     _windNameLabel.text = @"分向:";
     _windNameLabel.textAlignment = NSTextAlignmentRight;
     _windNameLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_windNameLabel];
     
     _windContentLabel = [[UILabel alloc]init];
+    [_windContentLabel setTextColor:[UIColor whiteColor]];
     _windContentLabel.textAlignment = NSTextAlignmentLeft;
     _windContentLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_windContentLabel];
     
     _feelNameLabel = [[UILabel alloc]init];
+    [_feelNameLabel setTextColor:[UIColor whiteColor]];
     _feelNameLabel.text = @"体感:";
     _feelNameLabel.textAlignment = NSTextAlignmentRight;
     _feelNameLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_feelNameLabel];
     
     _feelContentLabel = [[UILabel alloc]init];
+    [_feelContentLabel setTextColor:[UIColor whiteColor]];
     _feelContentLabel.textAlignment = NSTextAlignmentLeft;
     _feelContentLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_feelContentLabel];
     
     _washNameLabel = [[UILabel alloc]init];
+    [_washNameLabel setTextColor:[UIColor whiteColor]];
     _washNameLabel.text = @"洗浴建议:";
     _washNameLabel.textAlignment = NSTextAlignmentRight;
     _washNameLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_washNameLabel];
     
     _washContentLabel = [[UILabel alloc]init];
+    [_washContentLabel setTextColor:[UIColor whiteColor]];
     _washContentLabel.textAlignment = NSTextAlignmentLeft;
     _washContentLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_washContentLabel];
     
     _dryingNameLabel = [[UILabel alloc]init];
+    [_dryingNameLabel setTextColor:[UIColor whiteColor]];
     _dryingNameLabel.text = @"驾车建议:";
     _dryingNameLabel.textAlignment = NSTextAlignmentRight;
     _dryingNameLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_dryingNameLabel];
     
     _dryingContentLabel = [[UILabel alloc]init];
+    [_dryingContentLabel setTextColor:[UIColor whiteColor]];
     _dryingContentLabel.textAlignment = NSTextAlignmentLeft;
     _dryingContentLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_dryingContentLabel];
     
     _travelNameLabel = [[UILabel alloc]init];
+    [_travelNameLabel setTextColor:[UIColor whiteColor]];
     _travelNameLabel.text = @"出游建议:";
     _travelNameLabel.textAlignment = NSTextAlignmentRight;
     _travelNameLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_travelNameLabel];
     
     _travelContentLabel = [[UILabel alloc]init];
+    [_travelContentLabel setTextColor:[UIColor whiteColor]];
     _travelContentLabel.textAlignment = NSTextAlignmentLeft;
     _travelContentLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_travelContentLabel];
 
     _exerciseNameLabel = [[UILabel alloc]init];
+    [_exerciseNameLabel setTextColor:[UIColor whiteColor]];
     _exerciseNameLabel.text = @"锻炼建议:";
     _exerciseNameLabel.textAlignment = NSTextAlignmentRight;
     _exerciseNameLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_exerciseNameLabel];
     
     _exerciseContentLabel = [[UILabel alloc]init];
+    [_exerciseContentLabel setTextColor:[UIColor whiteColor]];
     _exerciseContentLabel.textAlignment = NSTextAlignmentLeft;
     _exerciseContentLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_exerciseContentLabel];
