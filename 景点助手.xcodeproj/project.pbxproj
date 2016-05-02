@@ -57,6 +57,7 @@
 		2286D9071C1C0B99003BC385 /* ZGWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2286D9061C1C0B99003BC385 /* ZGWeatherModel.m */; };
 		2286D90A1C1C0F5F003BC385 /* ZGWeatherTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2286D9091C1C0F5F003BC385 /* ZGWeatherTableController.m */; };
 		228E44311C22805C00880FD8 /* ZGHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E44301C22805C00880FD8 /* ZGHomeViewController.m */; };
+		229ED1D01CD5F44C00BCDBB0 /* ZGSetPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 229ED1CF1CD5F44C00BCDBB0 /* ZGSetPageView.m */; };
 		22A7E4E21CBE607A00EA9DE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A7E4E11CBE607A00EA9DE1 /* LaunchScreen.storyboard */; };
 		22A8CA551C21481200D00EBC /* ZGHotelIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A8CA541C21481200D00EBC /* ZGHotelIntroViewController.m */; };
 		22A8CA5B1C21498A00D00EBC /* ZGHotelIntroTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A8CA5A1C21498A00D00EBC /* ZGHotelIntroTextView.m */; };
@@ -174,6 +175,8 @@
 		2286D9091C1C0F5F003BC385 /* ZGWeatherTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGWeatherTableController.m; sourceTree = "<group>"; };
 		228E442F1C22805C00880FD8 /* ZGHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGHomeViewController.h; sourceTree = "<group>"; };
 		228E44301C22805C00880FD8 /* ZGHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGHomeViewController.m; sourceTree = "<group>"; };
+		229ED1CE1CD5F44C00BCDBB0 /* ZGSetPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGSetPageView.h; sourceTree = "<group>"; };
+		229ED1CF1CD5F44C00BCDBB0 /* ZGSetPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGSetPageView.m; sourceTree = "<group>"; };
 		22A7E4E11CBE607A00EA9DE1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22A8CA531C21481200D00EBC /* ZGHotelIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGHotelIntroViewController.h; sourceTree = "<group>"; };
 		22A8CA541C21481200D00EBC /* ZGHotelIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGHotelIntroViewController.m; sourceTree = "<group>"; };
@@ -366,6 +369,8 @@
 		224259DC1C140CC500D868BF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				229ED1CE1CD5F44C00BCDBB0 /* ZGSetPageView.h */,
+				229ED1CF1CD5F44C00BCDBB0 /* ZGSetPageView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1015,6 +1020,7 @@
 				22CACCC81CBC917000F36A8D /* ZGTrafficViewController.m in Sources */,
 				22806C641C17FB10002F4F4F /* ZGScenicTool.m in Sources */,
 				226834C21C1ACA83006D02C5 /* ZGCityModel.m in Sources */,
+				229ED1D01CD5F44C00BCDBB0 /* ZGSetPageView.m in Sources */,
 				22806C7D1C180507002F4F4F /* ZGHeaderView.m in Sources */,
 				22807D671C2196CE000A4829 /* ZGCellectShareView.m in Sources */,
 				2286D9071C1C0B99003BC385 /* ZGWeatherModel.m in Sources */,

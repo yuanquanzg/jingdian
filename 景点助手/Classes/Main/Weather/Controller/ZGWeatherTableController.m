@@ -72,7 +72,7 @@
     ZGWeatherModel *weat = _weatherArray ? _weatherArray[0] : nil;
     
     if ([weat.weather containsString:@"云"]) {
-        [self.tableView setBackgroundView:[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"weather_cloud1.jpeg"]]];
+        [self.tableView setBackgroundView:[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"weather_cloud.jpeg"]]];
     } else if ([weat.weather containsString:@"晴"]) {
         [self.tableView setBackgroundView:[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"weather_sun.jpg"]]];
     } else  if ([weat.weather containsString:@"雨"]) {
