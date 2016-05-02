@@ -28,7 +28,9 @@
     
     self.title = @"开发声明";
     
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"placeholderImage.png"]]];
+//    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"placeholderImage.png"]]];
+    
+      [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_team_bg.jpg"]]];
     
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     //    [backButton setTitle:@"注册" forState:UIControlStateNormal];
@@ -42,6 +44,9 @@
     self.navigationItem.leftBarButtonItem = leftButton;
     
     _introTextView = [[ZGHotelIntroTextView alloc]init];
+    [_introTextView setBackgroundColor:[UIColor clearColor]];
+//    [_introTextView.layer setBorderWidth:0.5f];
+//    [_introTextView.layer setBorderColor:[[UIColor whiteColor] CGColor]];
     
     [_introTextView.layer setMasksToBounds:YES];
     [_introTextView.layer setCornerRadius:10.0f];
@@ -71,6 +76,7 @@
         _introTextView.frame = CGRectMake(5, 5, self.view.frame.size.width - 10, contentFrame.size.height + 35);
     }
     
+    [_introTextView setTextColor:[UIColor whiteColor]];
     [self addSubview:_introTextView];
     
     _feedbackBtn = [UIButton buttonWithType:UIButtonTypeCustom];

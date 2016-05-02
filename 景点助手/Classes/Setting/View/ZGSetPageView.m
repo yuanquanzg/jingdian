@@ -36,7 +36,6 @@
     _scrollView = [[UIScrollView alloc]initWithFrame:self.frame];
     [_scrollView setDelegate:self];
     [_scrollView setBounces:NO];
-    _scrollView 
     _scrollView.showsVerticalScrollIndicator = NO;
     _scrollView.showsHorizontalScrollIndicator = NO;
     [_scrollView setContentSize:CGSizeMake(CGRectGetWidth(self.bounds) * 3.0, CGRectGetHeight(self.bounds))];

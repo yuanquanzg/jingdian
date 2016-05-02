@@ -48,9 +48,9 @@
     
     [_introTextView.layer setMasksToBounds:YES];
     [_introTextView.layer setCornerRadius:10.0f];
-    [_introTextView.layer setBorderWidth:0.5f];
-    [_introTextView.layer setBorderColor:[[UIColor whiteColor] CGColor]];
-//    [_introTextView setTextColor:[UIColor whiteColor]];
+//    [_introTextView.layer setBorderWidth:0.5f];
+//    [_introTextView.layer setBorderColor:[[UIColor whiteColor] CGColor]];
+
     [_introTextView setBackgroundColor:[UIColor clearColor]];
     
     _introTextView.text = _intro;
@@ -70,6 +70,8 @@
     }else {
         _introTextView.frame = CGRectMake(5, 5, self.view.frame.size.width - 10, contentFrame.size.height + 35);
     }
+    
+    [_introTextView setTextColor:[UIColor whiteColor]];
     
     [self addSubview:_introTextView];
 
