@@ -29,7 +29,7 @@
     
 //    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"placeholderImage.png"]]];
 
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"hoteIntro_bg.jpeg"]]];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"setting_team_bg.jpg"]]];
 
     
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
