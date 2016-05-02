@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1507F68ED264D34A0C3F0F6C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDCFFEE162EC0D3DCE94B3F /* libPods.a */; };
+		220353ED1CD72A93008844A2 /* ZGSetImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 220353EC1CD72A93008844A2 /* ZGSetImageView.m */; };
 		224259DF1C140CED00D868BF /* ZGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224259DE1C140CED00D868BF /* ZGNavigationController.m */; };
 		224259E51C14373100D868BF /* ZGHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 224259E41C14373100D868BF /* ZGHttpTool.m */; };
 		225CBAD41CC8864900A20495 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225CBAD31CC8864900A20495 /* SystemConfiguration.framework */; };
@@ -78,6 +79,8 @@
 
 /* Begin PBXFileReference section */
 		1E140ECF6FEA2345FB8451BE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		220353EB1CD72A93008844A2 /* ZGSetImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGSetImageView.h; sourceTree = "<group>"; };
+		220353EC1CD72A93008844A2 /* ZGSetImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGSetImageView.m; sourceTree = "<group>"; };
 		224259DD1C140CED00D868BF /* ZGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGNavigationController.h; sourceTree = "<group>"; };
 		224259DE1C140CED00D868BF /* ZGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGNavigationController.m; sourceTree = "<group>"; };
 		224259E31C14373100D868BF /* ZGHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGHttpTool.h; sourceTree = "<group>"; };
@@ -371,6 +374,8 @@
 			children = (
 				229ED1CE1CD5F44C00BCDBB0 /* ZGSetPageView.h */,
 				229ED1CF1CD5F44C00BCDBB0 /* ZGSetPageView.m */,
+				220353EB1CD72A93008844A2 /* ZGSetImageView.h */,
+				220353EC1CD72A93008844A2 /* ZGSetImageView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1044,6 +1049,7 @@
 				22643CAB1C1DC15100C741AD /* ZGFutureCell.m in Sources */,
 				227E14441BFC2F4A001E6FBB /* ZGAppDelegate.m in Sources */,
 				2286D90A1C1C0F5F003BC385 /* ZGWeatherTableController.m in Sources */,
+				220353ED1CD72A93008844A2 /* ZGSetImageView.m in Sources */,
 				22843B951C1FDB7C002F1251 /* ZGRoomModel.m in Sources */,
 				22CE33E11C1AF4EC003760BA /* ZGProvinTableController.m in Sources */,
 				22653A001C1E85DD00C0BA5C /* ZGPriceCell.m in Sources */,

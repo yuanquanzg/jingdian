@@ -122,8 +122,8 @@
     } else if (indexPath.section == 3) {
         
         ZGAboutViewController *about = [[ZGAboutViewController alloc]init];
-        ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:about];
-        [self presentViewController:nv animated:YES completion:nil];
+//        ZGNavigationController *nv = [[ZGNavigationController alloc]initWithRootViewController:about];
+        [self presentViewController:about animated:YES completion:nil];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
