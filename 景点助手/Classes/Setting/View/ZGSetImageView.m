@@ -47,7 +47,7 @@
 - (void)layoutSubviews  {
     [super layoutSubviews];
     
-    [_centrelImage setFrame:CGRectMake(self.frame.size.width / 2.0 - 100, self.frame.size.height / 2.0 - 70, 200, 350)];
+    [_centrelImage setFrame:CGRectMake(self.frame.size.width / 2.0 - 200 / 375.f * CGRectGetWidth(self.bounds) / 2.f, self.frame.size.height / 2.0 - 70, 200 / 375.f * CGRectGetWidth(self.bounds), 350 / 667.f * CGRectGetHeight(self.bounds))];
     
     [_titleLabel setFrame:CGRectMake(0, 30, CGRectGetWidth(self.bounds), 44)];
 }
