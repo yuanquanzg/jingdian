@@ -69,6 +69,7 @@
 		22BB8D811C19D455008F59CE /* ZGCityTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB8D801C19D455008F59CE /* ZGCityTableController.m */; };
 		22BB8D841C19D5FA008F59CE /* ZGCityTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB8D831C19D5FA008F59CE /* ZGCityTool.m */; };
 		22BB8D8D1C19D850008F59CE /* ZGTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB8D8C1C19D850008F59CE /* ZGTableViewController.m */; };
+		22C24A691CDF24C400216BA6 /* UIColor+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C24A681CDF24C400216BA6 /* UIColor+Image.m */; };
 		22CACCBC1CB6124E00F36A8D /* ZGCollectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CACCBB1CB6124E00F36A8D /* ZGCollectView.m */; };
 		22CACCBF1CB656F100F36A8D /* ZGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CACCBE1CB656F100F36A8D /* ZGViewController.m */; };
 		22CACCC51CB7548500F36A8D /* ZGErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CACCC41CB7548500F36A8D /* ZGErrorView.m */; };
@@ -199,6 +200,8 @@
 		22BB8D831C19D5FA008F59CE /* ZGCityTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGCityTool.m; sourceTree = "<group>"; };
 		22BB8D8B1C19D850008F59CE /* ZGTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGTableViewController.h; sourceTree = "<group>"; };
 		22BB8D8C1C19D850008F59CE /* ZGTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGTableViewController.m; sourceTree = "<group>"; };
+		22C24A671CDF24C400216BA6 /* UIColor+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Image.h"; sourceTree = "<group>"; };
+		22C24A681CDF24C400216BA6 /* UIColor+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Image.m"; sourceTree = "<group>"; };
 		22CACCBA1CB6124E00F36A8D /* ZGCollectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGCollectView.h; sourceTree = "<group>"; };
 		22CACCBB1CB6124E00F36A8D /* ZGCollectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGCollectView.m; sourceTree = "<group>"; };
 		22CACCBD1CB656F100F36A8D /* ZGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGViewController.h; sourceTree = "<group>"; };
@@ -272,6 +275,8 @@
 				22806C7F1C181740002F4F4F /* UIImageView+ZGTool.m */,
 				22AF816E1C1D3D7B00ACF684 /* ZGDataTool.h */,
 				22AF816F1C1D3D7B00ACF684 /* ZGDataTool.m */,
+				22C24A671CDF24C400216BA6 /* UIColor+Image.h */,
+				22C24A681CDF24C400216BA6 /* UIColor+Image.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -986,6 +991,7 @@
 				226834C21C1ACA83006D02C5 /* ZGCityModel.m in Sources */,
 				229ED1D01CD5F44C00BCDBB0 /* ZGSetPageView.m in Sources */,
 				22806C7D1C180507002F4F4F /* ZGHeaderView.m in Sources */,
+				22C24A691CDF24C400216BA6 /* UIColor+Image.m in Sources */,
 				22807D671C2196CE000A4829 /* ZGCellectShareView.m in Sources */,
 				2286D9071C1C0B99003BC385 /* ZGWeatherModel.m in Sources */,
 				22A8CA5B1C21498A00D00EBC /* ZGHotelIntroTextView.m in Sources */,

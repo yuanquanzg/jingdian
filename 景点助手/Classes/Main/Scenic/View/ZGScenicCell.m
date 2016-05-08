@@ -9,6 +9,7 @@
 #import "ZGScenicCell.h"
 #import "UIImageView+ZGTool.h"
 #import "ZGScenicSimple.h"
+#import "UIColor+Image.h"
 
 @interface ZGScenicCell ()
 
@@ -63,18 +64,18 @@
     
     _nameLabel = [[UILabel alloc]init];
     [_nameLabel setFont:[UIFont systemFontOfSize:22.0]];
-    [_nameLabel setTextColor:[UIColor whiteColor]];
+    [_nameLabel setTextColor:[UIColor imageColor]];
     _nameLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [_bgImageView addSubview:_nameLabel];
     
     _gradeLabel = [[UILabel alloc]init];
-    [_gradeLabel setTextColor:[UIColor whiteColor]];
+    [_gradeLabel setTextColor:[UIColor imageColor]];
     _gradeLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [_bgImageView addSubview:_gradeLabel];
     
     _addressLabel = [[UILabel alloc]init];
     [_addressLabel setFont:[UIFont systemFontOfSize:13.0]];
-    [_addressLabel setTextColor:[UIColor whiteColor]];
+    [_addressLabel setTextColor:[UIColor imageColor]];
     _addressLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [_bgImageView addSubview:_addressLabel];
     
